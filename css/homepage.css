@@ -1,0 +1,180 @@
+* {
+  font-size: 16px;
+}
+  .left-panel {
+      /* position: fixed; */
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(128, 162, 252);
+      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+      transition: all 0.3s ease-in-out;
+      border-radius: 25px;
+      /* margin: 30px; */
+    }
+    
+    .panel-content {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .left-panel h3 {
+      background-color: #FFC107;
+    }
+    
+    .collapse-btn {
+      padding: 10px;
+      border: none;
+      text-align: left;
+      cursor: pointer;
+      outline: none;
+      position: relative;
+      line-height: 1;
+    }
+    
+    .collapse-btn:before {
+      content: "\2190"; /* Unicode for left arrow symbol */
+      font-size: 36px;
+      color: #555;
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+
+    }
+    .left-panel.collapsed .collapse-btn:before {
+      transform: rotate(180deg) translateX(-2px) translateY(-50%);
+    }
+  
+    
+    .left-panel.collapsed {
+      width: 0px;
+      margin-left: 0px;
+    }
+    
+    .left-panel.collapsed .collapse-btn {
+      padding-left: 0px;
+      padding-right: 0px;
+      text-align: center;
+    }
+    
+    .left-panel.collapsed h1 {
+      display: none;
+    }
+  
+    .left-panel.collapsed .panel-content {
+      display: none;
+    }
+    
+  
+    /* Styles for the collapse button */
+  .panel-toggle {
+    border: none;
+    color: #666;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 10px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .panel-toggle:hover {
+    color: #000;
+  }
+  
+  .panel-toggle:focus {
+    outline: none;
+  }
+  
+  /* Styles for the arrow icon */
+  .panel-toggle .fas {
+    margin-right: 10px;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .panel-toggle.collapsed .fas {
+    transform: rotate(-90deg);
+  }
+  
+  /* Styles for the dropdown lists */
+  .panel-content select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  
+  .circle-button {
+    position: relative;
+    top: 80%;
+    left: 38%;
+    /* transform: translateY(-50%); */
+    width: 80px;
+    height: 30px;
+    border-radius: 25px;
+    background-color: #FFC107;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    /* padding: 10px;
+    padding-top: 25px; */
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .circle-button:hover {
+    background-color: #FFA000;
+  }
+  
+  .circle-button:active {
+    box-shadow: none;
+    transform: translateY(-50%) scale(0.95);
+  }
+
+
+
+  /* RIGHT SIDE */
+  
+  .right-panel.shrunk {
+    width: 20%;
+  }
+
+
+  .right-panel {
+    width: calc(100%); 
+    height: 100vh;
+    float: right;
+    background-color: #fff;
+    box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.3);
+    transition: width 0.3s ease-in-out;
+    border-radius: 25px;
+  }
+
+  .right-panel.expanded {
+    width: calc(160%); 
+  }
+ /* #rightID .shrunk {
+    width: 20%;
+  }
+
+
+  #rightID {
+    width: calc(50%); 
+    height: 100vh;
+    float: right;
+    background-color: #fff;
+    box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.3);
+    transition: width 0.3s ease-in-out;
+    border-radius: 2px;
+  }
+
+  #rightID .expanded {
+    width: 100%;
+  } */

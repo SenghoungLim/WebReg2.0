@@ -136,11 +136,6 @@
   .circle-button:hover {
     background-color: #FFA000;
   }
-  
-  .circle-button:active {
-    box-shadow: none;
-    transform: translateY(-50%) scale(0.95);
-  }
 
 
 

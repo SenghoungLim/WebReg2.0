@@ -84,29 +84,54 @@
                             </button>
                             <h3>Panel content</h3>
                             <div class="panel-content">
-                               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    
-                                <label for="dropdown1">Dropdown 1:</label>
-                                <select id="dropdown1">
-                                  <option value="option1">Option 1</option>
-                                  <option value="option2">Option 2</option>
-                                  <option value="option3">Option 3</option>
+
+                               <form id="class-form">
+                                <label for="term">Term:</label>
+                                <select id="term">
+                                  <option value="">All</option>
+                                  <option value="Winter">Winter</option>
+                                  <option value="Spring">Spring</option>
+                                  <option value="Fall">Fall</option>
                                 </select>
-                    
-                                <label for="dropdown2">Dropdown 2:</label>
-                                <select id="dropdown2">
-                                  <option value="option1">Option 1</option>
-                                  <option value="option2">Option 2</option>
-                                  <option value="option3">Option 3</option>
+                                <br>
+                                <label for="instructor">Instructor:</label>
+                                <select id="instructor">
+                                  <option value="">All</option>
+                                  <option value="john-doe">John Doe</option>
+                                  <option value="jane-smith">Jane Smith</option>
+                                  <option value="bob-johnson">Bob Johnson</option>
+                                  <option value="amy-lee">Amy Lee</option>
+                                  <option value="bob-smith">Bob Smith</option>
+                                  <option value="jane-doe">Jane Doe</option>
+                                  <option value="sarah-lee">Sarah Lee</option>
+                                  <option value="michael-brown">Michael Brown</option>
+                                  <option value="emily-taylor">Emily Taylor</option>
+                                  <option value="maria-rodriguez">Maria Rodriguez</option>
+                                  <option value="lucie-dupont">Lucie Dupont</option>
+                                  <option value="mario-rossi">Mario Rossi</option>
+                                  <option value="john-smith">John Smith</option>
+                                  <option value="michael-davis">Michael Davis</option>
+                                  <option value="sarah-johnson">Sarah Johnson</option>
+                                  <option value="samuel-brown">Samuel Brown</option>
                                 </select>
-                    
-                                <label for="dropdown3">Dropdown 3:</label>
-                                <select id="dropdown3">
-                                  <option value="option1">Option 1</option>
-                                  <option value="option2">Option 2</option>
-                                  <option value="option3">Option 3</option>
+                                <br>
+                                <label for="department">Department:</label>
+                                <select id="department">
+                                  <option value="">All</option>
+                                  <option value="computer-science">Computer Science</option>
+                                  <option value="english">English</option>
+                                  <option value="chemistry">Chemistry</option>
+                                  <option value="mathematics">Mathematics</option>
+                                  <option value="physics">Physics</option>
+                                  <option value="history">History</option>
+                                  <option value="biology">Biology</option>
+                                  <option value="art">Art</option>
+                                  <option value="foreign-language">Foreign Language</option>
+                                  <option value="geography">Geography</option>
                                 </select>
-                                <div class="circle-button">Submit </div>
+                                <br>
+                                <input type="submit" value="Submit" class="circle-button">
+                              </form>
                             </div>
                         </div>
                     <!-- </div> -->
@@ -139,11 +164,9 @@
                                     <div class = "row border g-0 rounded shadow-sm">
                                         <!-- Divide into two left and right -->
                                         <div class="ScheduleOfClassesContainer">
-                                            <p style="color: black;">
-                                                This is a schedule of classes content!
-                                                <hr class = "solid">
-                                                <button>+</button>
-                                            </p>
+                            
+                                                <ul id="class-list"></ul>
+                                            
                                         </div>
 
                                     </div>
@@ -238,7 +261,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
 
     <!-- Custom JS -->
-    <script src="js/main.js"></script>
+    <script src="js/panel.js"></script>
+    <script src="js/addClass.js"></script>
+
 </body>
 
 </html>

@@ -25,26 +25,29 @@
       background-color: #FFC107;
     }
     
+    .collapse-btn img {
+      width: 3rem;
+    }
+
     .collapse-btn {
       padding: 10px;
       border: none;
       text-align: left;
-      cursor: pointer;
       outline: none;
       position: relative;
       line-height: 1;
+      background-color:rgba(0, 0, 0, 0);
     }
     
     .collapse-btn:before {
-      content: "\2190"; /* Unicode for left arrow symbol */
       font-size: 36px;
-      color: #555;
       position: absolute;
       left: 10px;
       top: 50%;
       transform: translateY(-50%);
 
     }
+
     .left-panel.collapsed .collapse-btn:before {
       transform: rotate(180deg) translateX(-2px) translateY(-50%);
     }
@@ -56,9 +59,10 @@
     }
     
     .left-panel.collapsed .collapse-btn {
-      padding-left: 0px;
+      padding-left: 10px;
       padding-right: 0px;
       text-align: center;
+
     }
     
     .left-panel.collapsed h1 {
@@ -158,7 +162,7 @@
   }
 
   .right-panel.expanded {
-    width: 80vw; 
+    width: 90vw; 
   }
  /* #rightID .shrunk {
     width: 20%;

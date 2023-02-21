@@ -158,7 +158,7 @@
   }
 
   .right-panel.expanded {
-    width: calc(160%); 
+    width: 80vw; 
   }
  /* #rightID .shrunk {
     width: 20%;

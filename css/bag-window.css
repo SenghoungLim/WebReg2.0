@@ -1,0 +1,26 @@
+#open-window {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .window {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 400px;
+    height: 250px;
+    background-color: white;
+    border: 1px solid black;
+    padding: 10px;
+    transition: transform 0.3s ease-out;
+    transform: translateX(100%);
+  }
+  
+  .window-open {
+    transform: translateX(0%);
+  }
+  
+#bag-window-id {
+    display: none;
+}

@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive-style.css">
     <link rel="stylesheet" href = "css/homepage.css">
+    <link rel="stylesheet" href = "css/bag-window.css">
+
 </head>
 
 <body class="home">
@@ -141,6 +143,11 @@
                     <!-- <div> -->
                         <!-- The Three Tabs on the right side -->
                         <div class = "right-panel"> 
+                            <!-- Bag window -->
+                            <div id="bag-window-id" class = "bag-window-class">
+                                <button id="bag-window-close">Close</button>
+                                <ul id="bag-list"></ul>
+                            </div>
                             <!-- Use boostrap feature "nav" to let them know it is like a menu -->
                             <ul class = "nav nav-tabs">
                                 <!-- List Down Each Tab using "nav-item" feature from boostrap -->
@@ -151,11 +158,9 @@
                             
                             <div class = "tab-content">
                                 <!-- A fixed backpack on all tabs -->
-                                <div class="help-icon-wrapper">
-                                    <div class="help-button-class"><a href="#"
-                                            target="_blank&quot;">
-                                            <p id = "count">0</p>
-                                            <img src="./images/backpack.png"></p> </a>
+                                <div class="bag-icon-wrapper">
+                                    <div class="bag-button-class">
+                                             <button id="open-window"> <img src="./images/backpack.png"></button>
                                     </div>
                                 </div>
                                 <!-- Each tab has its own content -->
@@ -263,6 +268,8 @@
     <!-- Custom JS -->
     <script src="js/panel.js"></script>
     <script src="js/addClass.js"></script>
+    <script src="js/bag.js"></script>
+
 
 </body>
 

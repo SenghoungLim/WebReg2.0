@@ -467,19 +467,20 @@ a:hover,
 
 
 /* whatsapp intgration */
-.help-icon-wrapper {
+.bag-icon-wrapper {
     position: absolute;
 }
 
-.help-icon-wrapper .help-button-class {
+.bag-icon-wrapper .help-button-class {
     position: relative;
     width: 6rem;
     /* z-index: 1; */
     bottom: 1rem;
-    left: 800%;
+    left: 1350%;
+   
 }
 
-.help-icon-wrapper .help-button-class img{
+.bag-icon-wrapper .bag-button-class img{
     width: 5.5rem;
 
 }
@@ -501,7 +502,11 @@ a:hover,
     width: 5.5rem;
 
 }
-
+/* Bag window css */
+.bag-window-class
+{
+    position: fixed;
+}
 
 /* =====================================
 About Page CSS 

@@ -3,7 +3,7 @@
 }
 
 .row{
-  margin-top:35px;
+  margin-top:50px;
 }
 
   .left-panel {
@@ -51,6 +51,10 @@
       top: 50%;
       transform: translateY(-50%);
 
+    }
+
+    .empty {
+      height: 30px;
     }
 
     .left-panel.collapsed .collapse-btn:before {

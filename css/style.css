@@ -26,7 +26,7 @@
     --box-shadow: 0.1rem -0.07rem 1.5rem 0.3rem rgb(0 0 0 / 26%);
 
     /* font-family */
-    --primary-font: 'Lato', sans-serif;
+    --primary-font: 'Montserrat', 'Lato', sans-serif;
     --secondary-font: 'Montserrat', sans-serif;
 }
 

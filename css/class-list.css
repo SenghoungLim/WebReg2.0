@@ -1,8 +1,10 @@
-
+.ScheduleOfClassesContainer {
+    padding: 10px;
+}
 
 table {
     border-collapse: collapse;
-    width: 100%;
+    width: calc(100% - 20px);
     table-layout: fixed;
   }
   
@@ -12,19 +14,33 @@ table h4 {
 
 }
 
+tr {
+    border: 5px solid white;
+}
 
   td {
-    text-align: left;
-    border: 1px solid black;
+    text-align: center;
     word-wrap: break-word;
+    font-size: 1.25rem;
 
   }
 
 td:nth-child(10) {
-    background-color: white;
     border: none;
     text-align: center;
 }
+
+
+.table-heading {
+    border-bottom: 10px solid white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.table-heading * {
+    font-size: 1rem;
+}
+
 
 
 .main-course {
@@ -39,6 +55,8 @@ td:nth-child(10) {
     background-color: #CBC3E3;
 }
 
-tr button {
-    background-color: white;
+
+td button {
+    background-color: transparent;
+    font-size: 2.5rem;
 }

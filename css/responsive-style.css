@@ -143,3 +143,45 @@
         font-size: 25px;
     }
 }
+/* Iphone x */
+@media only screen 
+    and (device-width : 375px)
+    and (device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3)
+    {
+          
+        body #bag-window-id {
+
+            display: none;
+            right: 15px;
+            top: 80vh;
+            width: 330px;
+        }
+        
+    }
+    /* Iphone 8 */
+    @media only screen 
+    and (device-width : 375px) 
+    and (device-height : 667px) 
+    and (-webkit-device-pixel-ratio : 2) {
+        body #bag-window-id {
+
+            display: none;
+            right: 15px;
+            top: 80vh;
+            width: 330px;
+        }
+     }
+     /* iphone 8 plus */
+     @media only screen 
+    and (device-width : 414px) 
+    and (device-height : 736px) 
+    and (-webkit-device-pixel-ratio : 3) {
+        body #bag-window-id {
+
+            display: none;
+            right: 15px;
+            top: 80vh;
+            width: 330px;
+        }
+     }

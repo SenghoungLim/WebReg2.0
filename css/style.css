@@ -473,37 +473,30 @@ a:hover,
 
 
 /* Bag intgration */
-/* .bag-icon-wrapper {
-    position: absolute;
-} */
 
-/* .bag-icon-wrapper .bag-button-class {
-    position: relative;
-   
-} */
 
 .bag-icon-wrapper .bag-button-class img{
-    width: 5.5rem;
+    width: 9rem;
 
 }
-
-/* whatsapp intgration */
-.whatsapp-icon-wrapper {
-    position: relative;
+.bag-icon-wrapper .bag-button-class img:hover{
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
 }
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
 
-.whatsapp-button-class {
-    position: fixed;
-    width: 6rem;
-    z-index: 1;
-    bottom: 1rem;
-    left: 90%
-}
-
-.whatsapp-icon-wrapper .whatsapp-button-class img{
-    width: 5.5rem;
-
-}
 /* Bag window css */
 .bag-window-class
 {

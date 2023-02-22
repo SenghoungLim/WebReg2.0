@@ -71,7 +71,7 @@
 .panic-button-class {
     position: fixed;
     width: 6rem;
-    z-index: 1;
+    z-index: 3;
     bottom: 1rem;
     left: 92%
 }

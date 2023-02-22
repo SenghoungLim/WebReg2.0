@@ -1,14 +1,13 @@
 #open-window {
     position: relative;
-    /* bottom: 20px;
-    right: 20px; */
-    z-index: 1000;
-    left:100%;
+    z-index: 1;
+    left:99%;
     bottom: -300px;
+    
   }
   
   .window {
-    position: fixed;
+    position: absolute;
     bottom: 20px;
     right: 20px;
     width: 400px;
@@ -27,6 +26,6 @@
 #bag-window-id {
 
     display: none;
-    right: 250px;
-    top: 430px;
+    right: 15%;
+    top: 60vh;
 }

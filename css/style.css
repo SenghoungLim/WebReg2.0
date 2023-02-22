@@ -474,7 +474,6 @@ a:hover,
 
 /* Bag intgration */
 
-
 .bag-icon-wrapper .bag-button-class img{
     width: 9rem;
 
@@ -482,6 +481,7 @@ a:hover,
 .bag-icon-wrapper .bag-button-class img:hover{
     animation: shake 0.5s;
     animation-iteration-count: infinite;
+    display: none;;
 }
 @keyframes shake {
     0% { transform: translate(1px, 1px) rotate(0deg); }
@@ -664,4 +664,8 @@ hr.solid{
     height: 80vh;
     overflow: hidden;
     overflow-y: scroll;
+}
+
+.tab-content{
+    
 }

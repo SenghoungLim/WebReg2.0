@@ -55,6 +55,10 @@ td:nth-child(10) {
     background-color: #CBC3E3;
 }
 
+.discussion button,
+.lab button {
+    display: none;
+}
 
 td button {
     background-color: transparent;

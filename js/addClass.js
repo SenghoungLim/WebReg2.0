@@ -134,6 +134,8 @@ const bag = [] // an array to hold the courses in a bag
   }
   
 function displayCourses(courses) {
+  // Clear previous classes
+  table.textContent = '';
 
   for (let i = 0 ; i < courses.length; i++) {
       // Course title

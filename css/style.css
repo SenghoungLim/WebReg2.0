@@ -474,7 +474,7 @@ a:hover,
 .bag-icon-wrapper .help-button-class {
     position: relative;
     width: 6rem;
-    /* z-index: 1; */
+    z-index: 1;
     bottom: 1rem;
     left: 1350%;
    

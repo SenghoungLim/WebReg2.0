@@ -1,0 +1,81 @@
+/* The popup chat - hidden by default */
+  .chat-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+  }
+  
+  /* Add styles to the form container */
+  .help-container {
+    text-align: center;
+    max-width: 350px;
+    padding: 10px;
+    background-color: white;
+  }
+  
+  /* Full-width textarea */
+  .help-container textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    resize: none;
+    min-height: 200px;
+  }
+  
+  /* When the textarea gets focus, do something */
+  .help-container textarea:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Set a style for the submit/send button */
+  .help-container .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+  }
+  
+  /* Add a red background color to the cancel button */
+  .help-container .cancel {
+    background-color: red;
+    margin-top: 20px;
+    
+  }
+  
+  /* Add some hover effects to buttons */
+  .help-container .btn:hover, .panic-button:hover {
+    opacity: 1;
+  }
+
+  button {
+    border:none;
+    background-color:transparent;
+    outline:none;
+ }
+
+/* replacing whatsapp with panic button integration */
+.panic-icon-wrapper {
+    position: relative;
+}
+
+.panic-button-class {
+    position: fixed;
+    width: 6rem;
+    z-index: 1;
+    bottom: 1rem;
+    left: 92%
+}
+
+.panic-icon-wrapper .panic-button-class img{
+    width: 5.5rem;
+}

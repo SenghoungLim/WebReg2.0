@@ -1,7 +1,10 @@
 #open-window {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
+    position: relative;
+    /* bottom: 20px;
+    right: 20px; */
+    z-index: 1000;
+    left:100%;
+    bottom: -300px;
   }
   
   .window {
@@ -22,5 +25,8 @@
   }
   
 #bag-window-id {
+
     display: none;
+    right: 250px;
+    top: 430px;
 }

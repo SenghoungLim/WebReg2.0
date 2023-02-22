@@ -472,19 +472,15 @@ a:hover,
 }
 
 
-/* whatsapp intgration */
-.bag-icon-wrapper {
+/* Bag intgration */
+/* .bag-icon-wrapper {
     position: absolute;
-}
+} */
 
-.bag-icon-wrapper .help-button-class {
+/* .bag-icon-wrapper .bag-button-class {
     position: relative;
-    width: 6rem;
-    z-index: 1;
-    bottom: 1rem;
-    left: 1350%;
    
-}
+} */
 
 .bag-icon-wrapper .bag-button-class img{
     width: 5.5rem;

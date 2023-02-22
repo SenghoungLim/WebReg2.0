@@ -1,13 +1,14 @@
 #open-window {
     position: relative;
-    z-index: 1;
-    left:99%;
+    /* bottom: 20px;
+    right: 20px; */
+    z-index: 1000;
+    left:100%;
     bottom: -300px;
-    
   }
   
   .window {
-    position: absolute;
+    position: fixed;
     bottom: 20px;
     right: 20px;
     width: 400px;
@@ -26,15 +27,19 @@
 #bag-window-id {
 
     display: none;
-    right: 15%;
-    top: 60vh;
+    right: 250px;
+    top: 430px;
 }
 
 .bag-button-class{
   height:0px;
-  
 
 }
 .bag-icon-wrapper{
   border: solid;
+}
+
+h5,
+p {
+  color: black;
 }

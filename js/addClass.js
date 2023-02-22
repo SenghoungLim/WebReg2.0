@@ -66,17 +66,6 @@ new Course("Calculus I", "Open", "MATH101", "Lecture", 4, "Dr. Lee", "MWF 9-10:0
   new Lab("Open", "MATH101L1", "Lab", 1, "Chris Lee", "Th 1-3:00 PM", "Building 2 Room 303", 25, 30, 5, 10),
   new Lab("Open", "MATH101L2", "Lab", 1, "Jennifer Park", "T 1-3:00 PM", "Building 2 Room 304", 25, 30, 5, 10),
 ]),
-
-
-new Course("Calculus II", "Open", "MATH101", "Lecture", 4, "Dr. Lee", "MWF 9-10:00 AM", "Building 1 Room 102", 100, 150, 5, 10, "Mathematics", "Fall", [
-  new Discussion("Open", "MATH101A", "Discussion", 1, "Jessica Chen", "W 10-11:00 AM", "Building 1 Room 203", 25, 30, 5, 10),
-  new Discussion("Open", "MATH101B", "Discussion", 1, "David Kim", "F 10-11:00 AM", "Building 1 Room 204", 25, 30, 5, 10),
-], [
-  new Lab("Open", "MATH101L1", "Lab", 1, "Chris Lee", "Th 1-3:00 PM", "Building 2 Room 303", 25, 30, 5, 10),
-  new Lab("Open", "MATH101L2", "Lab", 1, "Jennifer Park", "T 1-3:00 PM", "Building 2 Room 304", 25, 30, 5, 10),
-]),
-
-
 ]
 
   
@@ -92,16 +81,50 @@ const bag = [] // an array to hold the courses in a bag
     return filteredCourses;
   }
   
+  function classAlreadyAdded(code) {
+    for (var i = 0; i< bag.length; i++) {
+      if (bag[i] == code) {
+        return true;
+      }
+    }
+    return false;
+  }
 
+  function getDiscussions(code) {
+    result = []
+    for (var i = 0; i< courses.length; i++) {
+      if (courses[i].code == code) {
+        for (var j = 0; j < courses[i].discussions.length; j++) {
+          result.push(courses[i].discussions[j].code)
+        }
+      }
+    }
+    return result;
+  }
+
+  function getLabs(code) {
+    result = []
+    for (var i = 0; i< courses.length; i++) {
+      if (courses[i].code == code) {
+        for (var j = 0; j < courses[i].labs.length; j++) {
+          result.push(courses[i].labs[j].code)
+        }
+      }
+    }
+    return result;
+  }
 
   // Get the table element from the HTML document
   const table = document.getElementById("courses-table");
 
   // Create a function to add a row to the table
   function addRowToTable(rowData, type) {
+
     // Create a new row element
     const row = document.createElement("tr");
     row.className = type;
+    row.id = rowData[1];
+
   
     // Loop through each cell data and add it to the row
     for (const data of rowData) {
@@ -118,14 +141,37 @@ const bag = [] // an array to hold the courses in a bag
       const cell = document.createElement("td");
       const addButton = document.createElement('button');
       addButton.textContent = '+';
-  
+
+
       addButton.addEventListener('click', () => {
-      bag.push(rowData[1]);
-      updateBag();
+      if (classAlreadyAdded(rowData[1])) {
+
+      }
+      else {
+        bag.push(rowData[1]);
+        updateBag();
+
+        // Make the buttons for the discussions/lab pop up after adding a lecture
+        if (type == 'main-course') {
+          discussionCodes = getDiscussions(rowData[1]);
+          labCodes = getLabs(rowData[1]);
+          for (var i = 0; i< discussionCodes.length; i++) {
+            const disButton = document.getElementById(discussionCodes[i]).getElementsByTagName('button')[0];
+            disButton.style.display = 'inline';
+          }
+          for (var i = 0; i< labCodes.length; i++) {
+            const labButton = document.getElementById(labCodes[i]).getElementsByTagName('button')[0];
+            labButton.style.display = 'inline';
+          }
+        }
+      }
+
       });
-  
+
       cell.appendChild(addButton);
       row.appendChild(cell);
+
+
     }
   
   

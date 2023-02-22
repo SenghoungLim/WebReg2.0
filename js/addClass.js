@@ -1,32 +1,84 @@
-function Course(title, instructor, department, term) {
-    this.title = title;
-    this.instructor = instructor;
-    this.department = department;
-    this.term = term;
-  }
-  
-  const courses = [
-    new Course('Introduction to Programming', 'John Doe', 'Computer Science', 'Fall'),
-    new Course('English Composition', 'Jane Smith', 'English', 'Spring'),
-    new Course('Chemistry 101', 'Bob Johnson', 'Chemistry', 'Fall'),
-    new Course('Calculus I', 'Amy Lee', 'Mathematics', 'Fall'),
-    new Course('Physics 101', 'Bob Smith', 'Physics', 'Fall'),
-    new Course('World History', 'Jane Doe', 'History', 'Spring'),
-    new Course('Biology 101', 'Sarah Lee', 'Biology', 'Spring'),
-    new Course('Art Appreciation', 'Michael Brown', 'Art', 'Winter'),
-    new Course('Digital Photography', 'Emily Taylor', 'Art', 'Spring'),
-    new Course('Spanish I', 'Maria Rodriguez', 'Foreign Language', 'Fall'),
-    new Course('French I', 'Lucie Dupont', 'Foreign Language', 'Fall'),
-    new Course('Italian I', 'Mario Rossi', 'Foreign Language', 'Spring'),
-    new Course('Computer Networks', 'John Smith', 'Computer Science', 'Spring'),
-    new Course('Web Development', 'Jane Doe', 'Computer Science', 'Winter'),
-    new Course('Database Systems', 'Bob Johnson', 'Computer Science', 'Spring'),
-    new Course('Linear Algebra', 'Amy Lee', 'Mathematics', 'Spring'),
-    new Course('Discrete Mathematics', 'Bob Smith', 'Mathematics', 'Winter'),
-    new Course('Chemistry 102', 'Sarah Johnson', 'Chemistry', 'Spring'),
-    new Course('Organic Chemistry', 'Samuel Brown', 'Chemistry', 'Winter'),
-    new Course('World Geography', 'Michael Davis', 'Geography', 'Fall')
-  ];
+
+function Course(title, status, code, type, units, instructor, schedule, location, enrollmentCurr, enrollmentMax, waitlistCurr, waitlistMax, department, term, discussions, labs) {
+  this.title = title; // On top of the table + for filtering
+
+  // For filtering
+  this.department = department;
+  this.term = term;
+
+  // In table
+  this.status = status;
+  this.code = code;
+  this.type = type;
+  this.units = units;
+  this.instructor = instructor;
+  this.schedule = schedule;
+  this.location = location;
+  this.enrollment = enrollmentCurr + '/' + enrollmentMax;
+  this.waitlist = waitlistCurr + '/' + waitlistMax;
+
+  // Other objects under the table
+  this.discussions = discussions;
+  this.labs = labs;
+}
+
+function Discussion(status, code, type, units, instructor, schedule, location, enrollmentCurr, enrollmentMax, waitlistCurr, waitlistMax) {
+  this.status = status;
+  this.code = code;
+  this.type = type;
+  this.units = units;
+  this.instructor = instructor;
+  this.schedule = schedule;
+  this.location = location;
+  this.enrollment = enrollmentCurr + '/' + enrollmentMax;
+  this.waitlist = waitlistCurr + '/' + waitlistMax;
+
+}
+
+function Lab(status, code, type, units, instructor, schedule, location, enrollmentCurr, enrollmentMax, waitlistCurr, waitlistMax) {
+  this.status = status;
+  this.code = code;
+  this.type = type;
+  this.units = units;
+  this.instructor = instructor;
+  this.schedule = schedule;
+  this.location = location;
+  this.enrollment = enrollmentCurr + '/' + enrollmentMax;
+  this.waitlist = waitlistCurr + '/' + waitlistMax;
+
+}
+
+const courses = [
+
+new Course("Intro to Programming", "Open", "COMP101", "Lecture", 4, "Dr. Johnson", "MWF 10:00AM-11:00AM", "Building 1 Room 101", 150, 300, 10, 20, "Computer Science", "Fall", [
+  new Discussion("Open", "COMP101A", "Discussion", 1, "John Smith", "M 1:00PM-2:00PM", "Building 1 Room 201", 25, 30, 5, 10),
+  new Discussion("Open", "COMP101B", "Discussion", 1, "Sarah Lee", "T 1:00PM-2:00PM", "Building 1 Room 202", 25, 25, 5, 10),
+], [
+  new Lab("Open", "COMP101L1", "Lab", 1, "Alex Brown", "F 1:00PM-3:00PM", "Building 2 Room 301", 25, 30, 5, 10),
+  new Lab("Open", "COMP101L2", "Lab", 1, "Emily Kim", "W 1:00PM-3:00PM", "Building 2 Room 302", 25, 30, 5, 10),
+]),
+
+
+new Course("Calculus I", "Open", "MATH101", "Lecture", 4, "Dr. Lee", "MWF 9:00AM-10:00AM", "Building 1 Room 102", 100, 150, 5, 10, "Mathematics", "Fall", [
+  new Discussion("Open", "MATH101A", "Discussion", 1, "Jessica Chen", "W 10:00AM-11:00AM", "Building 1 Room 203", 25, 30, 5, 10),
+  new Discussion("Open", "MATH101B", "Discussion", 1, "David Kim", "F 10:00AM-11:00AM", "Building 1 Room 204", 25, 30, 5, 10),
+], [
+  new Lab("Open", "MATH101L1", "Lab", 1, "Chris Lee", "Th 1:00PM-3:00PM", "Building 2 Room 303", 25, 30, 5, 10),
+  new Lab("Open", "MATH101L2", "Lab", 1, "Jennifer Park", "T 1:00PM-3:00PM", "Building 2 Room 304", 25, 30, 5, 10),
+]),
+
+
+new Course("Calculus II", "Open", "MATH101", "Lecture", 4, "Dr. Lee", "MWF 9:00AM-10:00AM", "Building 1 Room 102", 100, 150, 5, 10, "Mathematics", "Fall", [
+  new Discussion("Open", "MATH101A", "Discussion", 1, "Jessica Chen", "W 10:00AM-11:00AM", "Building 1 Room 203", 25, 30, 5, 10),
+  new Discussion("Open", "MATH101B", "Discussion", 1, "David Kim", "F 10:00AM-11:00AM", "Building 1 Room 204", 25, 30, 5, 10),
+], [
+  new Lab("Open", "MATH101L1", "Lab", 1, "Chris Lee", "Th 1:00PM-3:00PM", "Building 2 Room 303", 25, 30, 5, 10),
+  new Lab("Open", "MATH101L2", "Lab", 1, "Jennifer Park", "T 1:00PM-3:00PM", "Building 2 Room 304", 25, 30, 5, 10),
+]),
+
+
+]
+
   
 const bag = [] // an array to hold the courses in a bag
 
@@ -40,50 +92,129 @@ const bag = [] // an array to hold the courses in a bag
     return filteredCourses;
   }
   
-  function displayCourses(courses) {
-    console.log(courses.length)
-    let classList = document.getElementById('class-list');
-    classList.innerHTML = ''; // clear the previous list
-    if (courses.length === 0) {
-      let message = document.createElement('li');
-      message.textContent = 'No courses found.';
-      classList.appendChild(message);
-    } else {
-      courses.forEach(course => {
-        let courseItem = document.createElement('li');
-        let courseTitle = document.createElement('span');
-        let addButton = document.createElement('button');
-        addButton.innerText = 'ADD TO BAG';
-        addButton.addEventListener('click', () => {
-          bag.push(course);
-          updateBag();
-        })
 
-        courseTitle.textContent = course.title;
-        courseItem.appendChild(courseTitle);
-        courseItem.innerHTML += ` (${course.department}, ${course.term}) - Instructor: ${course.instructor}`;
-        classList.appendChild(courseItem);
-        courseItem.appendChild(addButton);
-        console.log("displayed")
-      });
+
+  // Get the table element from the HTML document
+  const table = document.getElementById("courses-table");
+
+  // Create a function to add a row to the table
+  function addRowToTable(rowData, type) {
+    // Create a new row element
+    const row = document.createElement("tr");
+    row.className = type;
+  
+    // Loop through each cell data and add it to the row
+    for (const data of rowData) {
+      // Create a new cell element
+      const cell = document.createElement("td");
+      
+      // Set the cell's text content to the data
+      cell.textContent = data;
+      
+      // Add the cell to the row
+      row.appendChild(cell);
     }
+    if (type != 'table-heading') {
+      const cell = document.createElement("td");
+      const addButton = document.createElement('button');
+      addButton.textContent = '+';
+  
+      addButton.addEventListener('click', () => {
+      bag.push(rowData[1]);
+      updateBag();
+      });
+  
+      cell.appendChild(addButton);
+      row.appendChild(cell);
+    }
+  
+  
+    // Add the row to the table
+    table.appendChild(row);
   }
+  
+function displayCourses(courses) {
+
+  for (let i = 0 ; i < courses.length; i++) {
+      // Course title
+      const courseTitle = document.createElement('h4');
+      courseTitle.textContent = courses[i].title;
+      table.appendChild(courseTitle);
+  
+      // Add the headers row to the table
+      addRowToTable([
+          "Status",
+          "Course Code",
+          "Class Type",
+          "Units",
+          "Instructor",
+          "Schedule",
+          "Location",
+          "Enrollment",
+          "Waitlist",
+      ],'table-heading');
+  
+      // Add course info
+      addRowToTable([
+          courses[i].status,
+          courses[i].code,
+          courses[i].type,
+          courses[i].units,
+          courses[i].instructor,
+          courses[i].schedule,
+          courses[i].location,
+          courses[i].enrollment,
+          courses[i].waitlist,
+        ],'main-course');
+      
+        // Add the discussion rows for courses[i]
+      for (const discussion of courses[i].discussions) {
+          addRowToTable([
+            discussion.status,
+            discussion.code,
+            discussion.type,
+            discussion.units,
+            discussion.instructor,
+            discussion.schedule,
+            discussion.location,
+            discussion.enrollment,
+            discussion.waitlist,
+          ],'discussion');
+        }
+      
+        // Add the lab rows for courses[i]
+      for (const lab of courses[i].labs) {
+          addRowToTable([
+            lab.status,
+            lab.code,
+            lab.type,
+            lab.units,
+            lab.instructor,
+            lab.schedule,
+            lab.location,
+            lab.enrollment,
+            lab.waitlist,
+          ],'lab', true);
+        }
+}
+    
+}
+
 
   function updateBag() {
-    console.log(bag)
     const bagList = document.getElementById('bag-list');
     bagList.innerHTML = ''; // Clear the previous list
     bag.forEach(course => {
-      const li = document.createElement('li');
-      const removeButton = document.createElement('button');
-      removeButton.innerText = 'Remove';
-      removeButton.addEventListener('click', () => {
-        bag.splice(bag.indexOf(course), 1);
-        updateBag();
-      });
-      li.innerText = `${course.title} - Instructor: ${course.instructor} - Department: ${course.department} - Term: ${course.term}`;
-      li.appendChild(removeButton);
-      bagList.appendChild(li);
+       const li = document.createElement('li');
+       const removeButton = document.createElement('button');
+       removeButton.innerText = 'Remove';
+       removeButton.addEventListener('click', () => {
+         bag.splice(bag.indexOf(course), 1);
+         updateBag();
+       });
+       li.innerText = course
+       li.appendChild(removeButton);
+        bagList.appendChild(li);
     });
   }
   

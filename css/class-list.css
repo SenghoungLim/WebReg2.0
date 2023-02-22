@@ -1,0 +1,37 @@
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+  }
+  
+  th, td {
+    text-align: left;
+    border: 1px solid black;
+    word-wrap: break-word;
+
+  }
+
+td:nth-child(10) {
+    background-color: white;
+    border: none;
+    text-align: center;
+}
+
+
+.main-course {
+    background-color: #F4F5C1;
+}
+
+.discussion {
+    background-color: #ADD8E6;
+}
+
+.lab {
+    background-color: #CBC3E3;
+}
+
+tr button {
+    background-color: white;
+}

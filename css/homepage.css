@@ -12,7 +12,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgb(128, 162, 252);
+      background-color: #0064a4;
       box-shadow: 2px 0 5px rgba(0,0,0,0.1);
       transition: all 0.3s ease-in-out;
       border-radius: 25px;
@@ -25,9 +25,16 @@
       flex-direction: column;
       gap: 20px;
     }
+
+    .panel-content label {
+      font-weight: bold;
+      color: white;
+    }
   
     .left-panel h3 {
       background-color: #FFC107;
+      color: black;
+      text-align: center;
     }
     
     .collapse-btn img {
@@ -75,7 +82,7 @@
 
     }
     
-    .left-panel.collapsed h1 {
+    .left-panel.collapsed * {
       display: none;
     }
   

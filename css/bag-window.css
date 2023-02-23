@@ -32,6 +32,7 @@
     display: none;
     right: 250px;
     top: 430px;
+    overflow-y: scroll;
 }
 
 .bag-button-class{

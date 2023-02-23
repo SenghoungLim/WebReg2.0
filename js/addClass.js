@@ -356,7 +356,7 @@ function displayCourses(courses) {
         for (var i = 0; i< listOfLabs.length; i++) {
           deleteFromBag(listOfLabs[i]);
         }
-        
+
         updateBag();
         console.log('removed', bag);
 
@@ -364,17 +364,26 @@ function displayCourses(courses) {
 
       if (getType(code) == 'Lecture') {
         const li = document.createElement('li');
-        const courseHeading = document.createElement('h5');
+        const courseHeading = document.createElement('div');
+        courseHeading.className = 'course-heading';
+
         courseHeading.innerText  = getObject(code).title;
 
         const ul = document.createElement('ul');
         ul.id = code + '-list';
 
-        const units = document.createElement('h6');
+        const units = document.createElement('div');
         units.innerText = getObject(code).units + ' Units';
+        units.className = 'info';
 
-        const prof = document.createElement('h6');
+        const prof = document.createElement('div');
         prof.innerText = getObject(code).instructor;
+        prof.className = 'info';
+
+
+        const schedule = document.createElement('div');
+        schedule.innerText = getObject(code).schedule;
+        schedule.className = 'info';
 
         const disList = document.createElement('ul');
         disList.id = code + '-bag-discussions';
@@ -384,6 +393,7 @@ function displayCourses(courses) {
 
         ul.appendChild(units);
         ul.appendChild(prof);
+        ul.appendChild(schedule);
         ul.appendChild(disList);
         ul.appendChild(labList);
 
@@ -401,7 +411,8 @@ function displayCourses(courses) {
         const ul = document.getElementById(getLecture(code) + '-list');
         
         const disList = document.getElementById(getLecture(code) + '-bag-discussions');
-        const discussionHeading = document.createElement('h5');
+        const discussionHeading = document.createElement('div');
+        discussionHeading.className = 'discussion-heading';
 
         discussionHeading.textContent = 'Discussion:'
         disList.textContent = getObject(code).code;
@@ -414,7 +425,8 @@ function displayCourses(courses) {
         const ul = document.getElementById(getLecture(code) + '-list');
 
         const labList = document.getElementById(getLecture(code) + '-bag-labs');
-        const labHeading = document.createElement('h5');
+        const labHeading = document.createElement('div');
+        labHeading.className = 'lab-heading';
 
         labHeading.textContent = 'Lab:'
         labList.textContent = getObject(code).code;

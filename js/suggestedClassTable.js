@@ -1,54 +1,4 @@
-// function Course(title, status, code, type, units, instructor, schedule, location, enrollmentCurr, enrollmentMax, waitlistCurr, waitlistMax, department, term, discussions, labs) {
-//     this.title = title; // On top of the table + for filtering
-  
-//     // For filtering
-//     this.department = department;
-//     this.term = term;
-  
-//     // In table
-//     this.status = status;
-//     this.code = code;
-//     this.type = type;
-//     this.units = units;
-//     this.instructor = instructor;
-//     this.schedule = schedule;
-//     this.location = location;
-//     this.enrollment = enrollmentCurr + '/' + enrollmentMax;
-//     this.waitlist = waitlistCurr + '/' + waitlistMax;
-  
-//     // Other objects under the table
-//     this.discussions = discussions;
-//     this.labs = labs;
-//   }
-  
-//   function Discussion(status, code, type, units, instructor, schedule, location, enrollmentCurr, enrollmentMax, waitlistCurr, waitlistMax, lectureCode) {
-//     this.status = status;
-//     this.code = code;
-//     this.type = type;
-//     this.units = units;
-//     this.instructor = instructor;
-//     this.schedule = schedule;
-//     this.location = location;
-//     this.enrollment = enrollmentCurr + '/' + enrollmentMax;
-//     this.waitlist = waitlistCurr + '/' + waitlistMax;
-  
-//     this.lectureCode = lectureCode;
-//   }
-  
-//   function Lab(status, code, type, units, instructor, schedule, location, enrollmentCurr, enrollmentMax, waitlistCurr, waitlistMax, lectureCode) {
-//     this.status = status;
-//     this.code = code;
-//     this.type = type;
-//     this.units = units;
-//     this.instructor = instructor;
-//     this.schedule = schedule;
-//     this.location = location;
-//     this.enrollment = enrollmentCurr + '/' + enrollmentMax;
-//     this.waitlist = waitlistCurr + '/' + waitlistMax;
-  
-//     this.lectureCode = lectureCode;
-//   }
-  
+
   const courses = [
   
   new Course("Intro to Programming", "Open", "COMP101", "Lecture", 4, "Dr. Johnson", "MWF 10-11:00 AM", "Building 1 Room 101", 150, 300, 10, 20, "Computer Science", "Fall", [
@@ -68,7 +18,6 @@
     new Lab("Open", "MATH101L2", "Lab", 1, "Jennifer Park", "T 1-3:00 PM", "Building 2 Room 304", 25, 30, 5, 10, "MATH101"),
   ]),
   ]
-
 
   const table = document.getElementById("suggested-courses-table-body-id");
 

@@ -43,3 +43,16 @@ h5,
 p {
   color: black;
 }
+
+.bag-button{
+  border:none;
+   background-color:transparent;
+   outline:none;
+}
+.bag-button-class{
+ height:0px;
+
+}
+/* .bag-icon-wrapper{
+ border: solid;
+} */

@@ -57,7 +57,7 @@
     opacity: 1;
   }
 
-  button {
+  .panic-button {
     border:none;
     background-color:transparent;
     outline:none;

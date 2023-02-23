@@ -23,6 +23,7 @@
     <link rel="stylesheet" href = "css/bag-window.css">
     <link rel="stylesheet" href = "css/class-list.css">
     <link rel="stylesheet" href = "css/chatButton.css">
+    <link rel="stylesheet" href = "css/advanced.css">
 
 </head>
 
@@ -139,9 +140,70 @@
                                   <option value="geography">Geography</option>
                                 </select>
                                 <br>
-                                <input type="submit" value="Submit" class="circle-button">
+                                <button  class="advanced" type="button">------Advanced Filter------</button>
+                                <div class="content">
+                                  <!-- Create a row -->
+                                  <div class="row">
+                                      <div class="col-lg-6">
+                                          <label for="general-education">GE</label>
+                                          <select id="GE">
+                                              <option value="">All</option>
+                                              <option value="GE-I">GE I</option>
+                                              <option value="GE-II">GE II</option>
+                                              <option value="GE-III">GE III</option>
+                                              <option value="GE-IV">GE IV</option>
+                                              <option value="GE..">...(future development)</option>
+                                            </select>
+  
+                                            
+                                      </div>
+                                      
+                                      <div class="col-lg-6">
+                                          <label for="unit">Unit </label>
+                                            <select id="unit-filter">
+                                                <option value="">All</option>
+                                                <option value="oneUnits">1</option>
+                                                <option value="twoUnits">2</option>
+                                                <option value="threeUnits">3</option>
+                                                <option value="fourUnits">4</option>
+                                                <option value="fiveUnits">5</option>
+                                                <option value="sixUnits">6</option>
+                                                <option value="xUnits">...(future development)</option>
+                                              </select>
+                                      </div>
+                                  </div>
+                                  <div class="row">
+                                      <div class="col-lg-6">
+                                          <label for="course-code">Course Code</label>
+                                          <select id="GE">
+                                              <option value="">All</option>
+                                              <option value="courseCode1">11111</option>
+                                              <option value="courseCode2">22222</option>
+                                              <option value="courseCode3">33333</option>
+                                              <option value="courseCode4">44444</option>
+                                              <option value="courseCodeX">...(future development)</option>
+                                            </select>
+  
+                                            
+                                      </div>
+                                      
+                                      <div class="col-lg-6">
+                                          <label for="unit">Day</label>
+                                            <select id="day-filter">
+                                                <option value="">All</option>
+                                                <option value="MWF">MWF</option>
+                                                <option value="TuTh">TuTh</option>
+                                                <option value="W">W</option>
+                                                <option value="dayX">...(future development)</option>
+                                              </select>
+                                      </div>
+                                  </div>
+                                </div>
+                                <div class="searchButton"><input type="submit" value="Submit" class="circle-button"></div>
+                               
                               </form>
                             </div>
+
                         </div>
                     <!-- </div> -->
                 </div>
@@ -321,6 +383,7 @@
     <script src="js/bag.js"></script>
     <script src="js/chatButton.js"></script>
     <script src="js/moveBagWindow.js"></script>
+    <script src="js/advanced.js"></script>
 
 
 </body>

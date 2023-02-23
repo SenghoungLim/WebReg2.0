@@ -335,6 +335,12 @@ function displayCourses(courses) {
 
 
   function updateBag() {
+    const notification = document.getElementById('notification');
+    notification.style.display = 'block';
+    const backpackImg = document.querySelector('.bag-icon-wrapper .bag-button-class img');
+    backpackImg.classList.toggle('shake');
+
+
     const bagList = document.getElementById('bag-list');
     bagList.innerHTML = ''; // Clear the previous list
     console.log(bag);

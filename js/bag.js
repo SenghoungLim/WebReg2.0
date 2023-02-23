@@ -1,8 +1,8 @@
 const openWindowButton = document.getElementById('open-window');
 
 openWindowButton.addEventListener('click', () => {
-    console.log("Bag clicked")
-
+    const notification = document.getElementById('notification')
+    notification.style.display = 'none';
 
   const windowElement = document.getElementById('bag-window-id'); // create window
   windowElement.style.display = 'inline';

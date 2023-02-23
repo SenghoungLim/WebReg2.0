@@ -7,6 +7,17 @@
     bottom: -300px;
   }
 
+  #notification {
+    position: relative;
+    left: 65%;
+    bottom: 30px;
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display:none;
+  }
+
 
   
   .window {

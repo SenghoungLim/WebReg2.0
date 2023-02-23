@@ -11,7 +11,22 @@
   font-size: 15px;
 }
 
+.advanced:hover {
+  color: #FFC107;
 
+}
+
+.advanced:after {
+  content: "\25bc";
+  color: white;
+  font-weight: bold;
+  padding-left: 1rem;
+  
+}
+
+.advanced.active:after {
+  content: "\25b2";
+}
 
 /* Style the collapsible content. Note: hidden by default */
 .content {

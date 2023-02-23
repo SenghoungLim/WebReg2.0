@@ -24,6 +24,8 @@
     <link rel="stylesheet" href = "css/class-list.css">
     <link rel="stylesheet" href = "css/chatButton.css">
     <link rel="stylesheet" href = "css/advanced.css">
+    <link rel="stylesheet" href = "css/frontPage.css">
+    <link rel="stylesheet" href = "css/suggestedClass.css">
 
 </head>
 
@@ -252,9 +254,11 @@
                                             <p>Your enrollment window open on <span>Mar/30/2023 at 4:30PM</span></p>
                                             <p>Check out our <a href="https://www.reg.uci.edu/registrar/soc/webreg.html">instruction for using this new WebReg</a></p>
                                         </div>
-                                        <div class="instructionPage" id = "instructionPageID">
-                                            <img src="./images/peterTheAnteater.png">
+
+                                        <div class="peterImgClass">
+                                                <img src="images/peterTheAnteater.png">
                                         </div>
+
                                      </div>
                                         <!-- Divide into two left and right -->
                                         <div id="ScheduleOfClassesContainerID" class="ScheduleOfClassesContainer">
@@ -298,10 +302,45 @@
                                 <div class = "tab-pane" id = "SuggestedClasses">
                                     <div class = "row border g-0 rounded shadow-sm">
                                         <!-- Divide into two left and right -->
-                                        <div class="col">
-                                            <p style="color: black;">
-                                                This is a suggested classes content!
-                                            </p>
+                                        <div class="suggestedClassContainer">
+                                            <div class="degreeWorkHeader">
+                                                <!-- <p style="color: black;">
+                                                    Here are the suggested classes according to Your degree work data
+                                                 </p> -->                                    
+                                            </div>
+                                            
+                                            <div class="majorRequirementHeader">
+                                                <h3> Major Requirement</h3>
+                                            </div>
+                                            <div class="suggestedClassTable">
+                                                <!-- HTML table markup -->
+                                                <table id="suggested-courses-table-id">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>Course Name</th>
+                                                        <th>Status</th>
+                                                        <th>Course Code</th>
+                                                        <th>Class Type</th>
+                                                        <th>Credits</th>
+                                                        <th>Instructor</th>
+                                                        <th>Schedule</th>
+                                                        <th>Location</th>
+                                                        <th>Enrolled</th>
+                                                        <th>Capacity</th>
+                                                        <th>Waitlist</th>
+                                                        <th>Available Seats</th>
+                                                        <th>Department</th>
+                                                        <th>Term</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody id="suggested-courses-table-body-id">
+                                                    </tbody>
+                                                </table>
+                                                
+                                            </div>
+                                            <div class="majorRequirementHeader">
+                                                <h3> Electives</h3>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

@@ -340,8 +340,8 @@ function displayCourses(courses) {
     console.log(bag);
     bag.forEach(code => {
 
-      const removeButton = document.createElement('button');
-      removeButton.innerText = 'Remove';
+      const removeButton = document.createElement('img');
+      removeButton.src= './images/trash-can.png';
       removeButton.addEventListener('click', () => {
        // const existingLabs
         bag.splice(bag.indexOf(code), 1);
@@ -397,10 +397,19 @@ function displayCourses(courses) {
         ul.appendChild(disList);
         ul.appendChild(labList);
 
+        
+        const left = document.createElement('div');
+        left.className = 'left';
 
-        li.appendChild(courseHeading);
-        li.appendChild(ul);
-        li.appendChild(removeButton);
+        const right = document.createElement('div');
+        right.className = 'right';
+
+        left.appendChild(removeButton);
+        right.appendChild(courseHeading);
+        right.appendChild(ul);
+
+        li.appendChild(right);
+        li.appendChild(left);
         
  
         bagList.appendChild(li);
@@ -449,5 +458,3 @@ function displayCourses(courses) {
     displayCourses(filteredCourses);
   });
   
-
-console.log("Bags");

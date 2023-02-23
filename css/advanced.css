@@ -11,6 +11,8 @@
   font-size: 15px;
 }
 
+
+
 .advanced:hover {
   color: #FFC107;
 
@@ -21,7 +23,6 @@
   color: white;
   font-weight: bold;
   padding-left: 1rem;
-  
 }
 
 .advanced.active:after {

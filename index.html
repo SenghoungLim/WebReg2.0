@@ -244,44 +244,53 @@
                                 <!-- Schedule of classes tab -->
                                 <div class = "tab-pane active" id = "ScheduleOfClasses">
                                     <div class = "row">
+                                    <div class="initialOpenPage" id ="initialOpenPageID">
+                                        <div class="enrollWindowStatement">
+                                            <p>Hello Fellow Anteater!</p>
+                                            <p>Welcome to the new UCI WebReg</p>
+                                            <p>Your enrollment window open on <span>Mar/30/2023 at 4:30PM</span></p>
+                                            <p>Check out our <a href="https://www.reg.uci.edu/registrar/soc/webreg.html">instruction for using this new WebReg</a></p>
+                                        </div>
+                                        <div class="instructionPage" id = "instructionPageID">
+                                            <img src="./images/peterTheAnteater.png">
+                                        </div>
+                                     </div>
                                         <!-- Divide into two left and right -->
                                         <div id="ScheduleOfClassesContainerID" class="ScheduleOfClassesContainer">
                                                 <!-- TABLE GOES HERE-->
                                                 <table id="courses-table">
                                                 </table>
                                         </div>
-
+                                   
                                     </div>
                                 </div>
 
 
 
-                                <!-- Study List -->
-                                <div class = "tab-pane" id = "StudyList">
-                                    <div class = "row">           
-                                        <!-- Divide into two left and right -->
-                                        <div class="underStudyListTabs">
-                                            <ul class = "nav nav-tabs">
-                                                <!-- List Down Each Tab using "nav-item" feature from boostrap -->
-                                                <li class = "nav-item"><a class = "nav-link active" data-bs-toggle="tab" href ="#listView">List View</a></li>
-                                                <li class = "nav-item"><a class = "nav-link" data-bs-toggle="tab" href ="#calendarView">Calendar View</a></li>
-                                            </ul>
-                                            <!-- List View Tab -->
-                                            
-                                            <div class="tab-content two">
-                                                <div class="tab-pane two fade active in" id="listView">
-                                                    <p>Tab 1.1</p>
-                                                </div>
-                                                <!-- Caledendar View -->
-                                                <div class="tab-pane two fade" id="calendarView">
-                                                    
-                                                </div>
+                             <!-- Study List -->
+                             <div class = "tab-pane" id = "StudyList">
+                                <div class = "row">           
+                                    <!-- Divide into two left and right -->
+                                    <div class="underStudyListTabs">
+                                        <ul class = "nav nav-tabs">
+                                            <!-- List Down Each Tab using "nav-item" feature from boostrap -->
+                                            <li class = "nav-item"><a class = "nav-link active" data-bs-toggle="tab" href ="#listView">List View</a></li>
+                                            <li class = "nav-item"><a class = "nav-link" data-bs-toggle="tab" href ="#calendarView">Calendar View</a></li>
+                                        </ul>
+                                        <!-- List View Tab -->
+                                        
+                                        <div class="tab-content two">
+                                            <div class="tab-pane two active" id="listView">
+                                                <img src="./images/backpack.png">
+                                            </div>
+                                            <!-- Caledendar View -->
+                                            <div class="tab-pane two" id="calendarView">
+                                                <img src="./images/scheduleWebReg.png">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
-
+                            </div>
 
 
                                 <!-- Suggested Classes -->

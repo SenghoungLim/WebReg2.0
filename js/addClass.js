@@ -460,6 +460,8 @@ function displayCourses(courses) {
   
   let classForm = document.getElementById('class-form');
   classForm.addEventListener('submit', event => {
+    const anteater = document.getElementById('initialOpenPageID');
+    anteater.style.display = 'none';
     console.log("clicked")
     event.preventDefault();
     let term = document.getElementById('term').value;

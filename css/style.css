@@ -700,3 +700,86 @@ hr.solid{
     border: red;
     border-style: solid;
 }
+
+#listView{
+    color: #000;
+    border: #000;
+    border-style: solid;
+}
+
+#calendarView{
+    color: #000;
+    border: red;
+    border-style: solid;
+}
+
+#calendarView img{
+    max-width: 100%;
+    max-height: 80vh;
+    display: block;
+}
+
+
+/* Tabs animation */
+.tab-pane {
+    transform: translateY(100%);
+    transition: transform 2s;
+  }
+  .tab-pane.active {
+    transform: translateY(0%);
+  }
+
+  /* .instructionPage
+  {
+    position: relative;
+    width: 100%;
+    height: 620px;
+    overflow:hidden;
+    border-radius: 2rem;
+  }
+  .instructionPage img
+  {
+    position: absolute;
+    padding: 1rem;
+    padding-right:3rem;
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+  } */
+
+  .instructionPage {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 57%; /* Sets the aspect ratio to 3:2 */
+    overflow: hidden;
+  }
+  
+  .instructionPage img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    border-radius: 2rem;
+    object-fit: cover; /* Resizes the image to cover the container */
+  }
+    
+  @media only screen and (max-width: 768px) {
+    .instructionPage {
+      padding-bottom: 100%; 
+      border-radius: 1rem;
+    }
+  }
+
+  .enrollWindowStatement p{
+    color: #000;
+    text-align: center;
+  }
+  .enrollWindowStatement span{
+    color: red;
+    text-align: center;
+    font-weight: bold;
+
+  }

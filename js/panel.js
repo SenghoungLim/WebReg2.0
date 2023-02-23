@@ -14,8 +14,3 @@ const toggleRightPanelWidth = () => {
 function togglePanel() {
     toggleLeftPanelWidth()
 }
-
-$("ul.nav-tabs a").click(function (e) {
-  e.preventDefault();
-  $(this).tab('show');
-});

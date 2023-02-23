@@ -335,13 +335,19 @@ function displayCourses(courses) {
 
 
   function updateBag() {
-    const saveButton = document.getElementById('save-button');
-    saveButton.style.display = 'inline';
+
     const notification = document.getElementById('notification');
     notification.style.display = 'block';
-    const backpackImg = document.querySelector('.bag-icon-wrapper .bag-button-class img');
-    backpackImg.classList.toggle('shake');
 
+    const backpackImg = document.querySelector('.bag-icon-wrapper .bag-button-class img');
+    backpackImg.style.cssText = 'animation: shake 0.5s';
+    setTimeout(() => {
+      backpackImg.style.cssText = 'animation: none';
+    }, 500)
+
+    const saveButton = document.getElementById('save-button');
+    saveButton.style.display = 'inline';
+    
 
     const bagList = document.getElementById('bag-list');
     bagList.innerHTML = ''; // Clear the previous list

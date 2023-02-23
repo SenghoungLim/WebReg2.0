@@ -39,9 +39,27 @@
   border: solid;
 }
 
-h5,
-p {
+#bag-window-id h1,
+#bag-window-id h2,
+#bag-window-id h3,
+#bag-window-id h4,
+#bag-window-id h5,
+#bag-window-id h6,
+#bag-window-id p {
   color: black;
+  text-transform: none;
+}
+
+#bag-window-id h5 {
+  font-weight: bold;
+}
+
+#bag-window-id ul ul h5 {
+  font-weight: normal;
+}
+
+#bag-window-id ul ul ul {
+  font-size: 1.5rem;
 }
 
 .bag-button{

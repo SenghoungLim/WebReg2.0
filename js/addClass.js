@@ -210,6 +210,7 @@ const bag = [] // an array to hold the courses in a bag
       addButton.addEventListener('click', () => {
       if (classAlreadyAdded(rowData[1])) {
         // Main course already added
+        // display error message duplicate
       }
       else {
         console.log(type);
@@ -224,8 +225,15 @@ const bag = [] // an array to hold the courses in a bag
           const labs = getObject(getLecture(rowData[1])).labs;
           deleteFromBag(returnOldLab(labs));
         }
-        bag.push(rowData[1]);
-        updateBag();
+
+        if (type != 'main-course' && !bag.includes(getLecture(rowData[1]))) {
+          // display error message: add lecture first
+        }
+        else {
+          bag.push(rowData[1]);
+          updateBag();
+        }
+
 
         // Make the buttons for the discussions/lab pop up after adding a lecture
         if (type == 'main-course') {
@@ -335,8 +343,23 @@ function displayCourses(courses) {
       const removeButton = document.createElement('button');
       removeButton.innerText = 'Remove';
       removeButton.addEventListener('click', () => {
-        bag.splice(bag.indexOf(course), 1);
+       // const existingLabs
+        bag.splice(bag.indexOf(code), 1);
+        const listOfDiscussions = getDiscussions(code);
+        const listOfLabs = getLabs(code);
+
+        // Delete any discussion section
+        for (var i = 0; i< listOfDiscussions.length; i++) {
+          deleteFromBag(listOfDiscussions[i]);
+        }
+        // Delete any lab section
+        for (var i = 0; i< listOfLabs.length; i++) {
+          deleteFromBag(listOfLabs[i]);
+        }
+        
         updateBag();
+        console.log('removed', bag);
+
       });
 
       if (getType(code) == 'Lecture') {
@@ -347,12 +370,20 @@ function displayCourses(courses) {
         const ul = document.createElement('ul');
         ul.id = code + '-list';
 
+        const units = document.createElement('h6');
+        units.innerText = getObject(code).units + ' Units';
+
+        const prof = document.createElement('h6');
+        prof.innerText = getObject(code).instructor;
+
         const disList = document.createElement('ul');
         disList.id = code + '-bag-discussions';
 
         const labList = document.createElement('ul');
         labList.id = code + '-bag-labs';
 
+        ul.appendChild(units);
+        ul.appendChild(prof);
         ul.appendChild(disList);
         ul.appendChild(labList);
 

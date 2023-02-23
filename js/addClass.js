@@ -84,12 +84,33 @@ const bag = [] // an array to hold the courses in a bag
   }
 
   function getObject(code) {
+    // search courses
     for (var i = 0; i< courses.length; i++) {
       if (courses[i].code == code) {
         return courses[i];
       }
     }
-  }
+    
+    for (var i = 0; i< courses.length; i++) {
+      // labs
+      l = courses[i].labs;
+      for (var j = 0; j < l.length; j++) {
+        if (l[j].code == code) {
+          return l[j];
+        } 
+      }
+    }
+
+    for (var i = 0; i< courses.length; i++) {
+    // search discussions
+      d = courses[i].discussions;
+      for (var j = 0; j < d.length; j++) {
+        if (d[j].code == code) {
+          return d[j];
+        }
+      }
+    }
+}
 
   function getType(code) {
     return getObject(code).type;
@@ -127,12 +148,44 @@ const bag = [] // an array to hold the courses in a bag
     return result;
   }
 
+  function deleteFromBag(code) {
+    console.log("DELETE CALLED");
+    console.log("bag before", bag, code);
+    for (var i = 0; i< bag.length; i++) {
+      if (bag[i] == code) {
+        console.log('bag code deleted - ', bag[i]);
+        bag.splice(i, 1);
+      }
+    }
+  }
+
+
+  function returnOldDiscussion(discussions) {
+    for (var i = 0; i< bag.length; i++) {
+      for (var j = 0; j < discussions.length; j++) {
+        if (bag[i] == discussions[j].code) {
+          return bag[i];
+        }
+      }
+    }
+  }
+
+  function returnOldLab(labs) {
+    for (var i = 0; i< bag.length; i++) {
+      for (var j = 0; j < labs.length; j++) {
+        if (bag[i] == labs[j].code) {
+          return bag[i];
+        }
+      }
+    }
+  }
+
   // Get the table element from the HTML document
   const table = document.getElementById("courses-table");
 
   // Create a function to add a row to the table
   function addRowToTable(rowData, type) {
-
+    
     // Create a new row element
     const row = document.createElement("tr");
     row.className = type;
@@ -155,12 +208,24 @@ const bag = [] // an array to hold the courses in a bag
       const addButton = document.createElement('button');
       addButton.textContent = '+';
 
-
+      // Adding a class button
       addButton.addEventListener('click', () => {
       if (classAlreadyAdded(rowData[1])) {
-
+        // Main course already added
       }
       else {
+        console.log(type);
+        if (type=='discussion') {
+          // delete any discussions for the current course if they are in bag already
+          const discusssions = getObject(getLecture(rowData[1])).discussions
+          deleteFromBag(returnOldDiscussion(discusssions));
+        }
+
+        if (type=='lab') {
+          // delete any labs for the current course if they are in bag already
+          const labs = getObject(getLecture(rowData[1])).labs;
+          deleteFromBag(returnOldLab(labs));
+        }
         bag.push(rowData[1]);
         updateBag();
 
@@ -282,12 +347,16 @@ function displayCourses(courses) {
         courseHeading.innerText  = getObject(code).title;
 
         const ul = document.createElement('ul');
-        const test = document.createElement('p');
-        test.innerText = "Hello this is a test";
-        const test2 = document.createElement('p');
-        test2.innerText = "Hello this is a testss";
-        ul.appendChild(test);
-        ul.appendChild(test2);
+        ul.id = code + '-list';
+
+        const disList = document.createElement('ul');
+        disList.id = code + '-bag-discussions';
+
+        const labList = document.createElement('ul');
+        labList.id = code + '-bag-labs';
+
+        ul.appendChild(disList);
+        ul.appendChild(labList);
 
 
         li.appendChild(courseHeading);
@@ -298,8 +367,22 @@ function displayCourses(courses) {
         bagList.appendChild(li);
 
       }
+      else if (getType(code) == 'Discussion') {
+        // discussion added
+        const ul = document.getElementById(getLecture(code) + '-list');
+        
+        const disList = document.getElementById(getLecture(code) + '-bag-discussions');
+        disList.textContent = getObject(code).code;
+
+        ul.appendChild(disList);
+      }
       else {
-        console.log("other");
+        // lab added
+        const ul = document.getElementById(getLecture(code) + '-list');
+        const labList = document.getElementById(getLecture(code) + '-bag-labs');
+        labList.textContent = getObject(code).code;
+
+        ul.appendChild(labList);
       }
 
        });
@@ -317,4 +400,4 @@ function displayCourses(courses) {
   });
   
 
-console.log("Bags")
+console.log("Bags");

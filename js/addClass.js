@@ -149,11 +149,9 @@ const bag = [] // an array to hold the courses in a bag
   }
 
   function deleteFromBag(code) {
-    console.log("DELETE CALLED");
-    console.log("bag before", bag, code);
     for (var i = 0; i< bag.length; i++) {
       if (bag[i] == code) {
-        console.log('bag code deleted - ', bag[i]);
+        console.log(bag[i]);
         bag.splice(i, 1);
       }
     }
@@ -372,16 +370,25 @@ function displayCourses(courses) {
         const ul = document.getElementById(getLecture(code) + '-list');
         
         const disList = document.getElementById(getLecture(code) + '-bag-discussions');
+        const discussionHeading = document.createElement('h5');
+
+        discussionHeading.textContent = 'Discussion:'
         disList.textContent = getObject(code).code;
 
+        ul.appendChild(discussionHeading);
         ul.appendChild(disList);
       }
       else {
         // lab added
         const ul = document.getElementById(getLecture(code) + '-list');
+
         const labList = document.getElementById(getLecture(code) + '-bag-labs');
+        const labHeading = document.createElement('h5');
+
+        labHeading.textContent = 'Lab:'
         labList.textContent = getObject(code).code;
 
+        ul.appendChild(labHeading);
         ul.appendChild(labList);
       }
 

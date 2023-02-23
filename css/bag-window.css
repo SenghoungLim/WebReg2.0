@@ -40,8 +40,15 @@
   }
 
   .button-area {
-    text-align: right;
     padding-right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 5px;
+  }
+
+  .close-bag {
+    font-size: 1.5rem;
   }
   #bag-window-close {
     font-size: 3rem;

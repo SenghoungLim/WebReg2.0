@@ -2,7 +2,7 @@
     position: relative;
     /* bottom: 20px;
     right: 20px; */
-    z-index: 1000;
+    z-index: 3;
     left:100%;
     bottom: -300px;
   }
@@ -13,7 +13,7 @@
     right: 20px;
     width: 400px;
     height: 250px;
-    background-color: white;
+    background-color: rgb(162, 125, 125);
     border: 1px solid black;
     padding: 10px;
     transition: transform 0.3s ease-out;

@@ -335,6 +335,8 @@ function displayCourses(courses) {
 
 
   function updateBag() {
+    const saveButton = document.getElementById('save-button');
+    saveButton.style.display = 'inline';
     const notification = document.getElementById('notification');
     notification.style.display = 'block';
     const backpackImg = document.querySelector('.bag-icon-wrapper .bag-button-class img');
@@ -365,6 +367,9 @@ function displayCourses(courses) {
 
         updateBag();
         console.log('removed', bag);
+        if (bag.length == 0) {
+          saveButton.style.display = 'none';
+        }
 
       });
 

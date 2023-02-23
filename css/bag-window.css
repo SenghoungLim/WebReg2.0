@@ -131,3 +131,16 @@ ul .left {
   font-style: italic;
   font-size: 1.5rem;
 }
+
+
+.bottom {
+  text-align: center;
+}
+#save-button {
+  background-color: #0064a4;
+  color: white;
+  border-radius: 10%;
+  text-align: center;
+  padding: 2px 5px;
+  display: none;
+}

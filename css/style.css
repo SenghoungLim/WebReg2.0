@@ -650,6 +650,8 @@ Contact Page CSS
     font-size: 1.5rem;
     border-radius: 1rem;
     font-weight: bold;
+    /* border-radius: 2rem !important; */
+    border-color: #dee2e6 #dee2e6 #dee2e6;
     
 }
 .nav-tabs .nav-link {
@@ -667,4 +669,33 @@ hr.solid{
     height: 80vh;
     overflow: hidden;
     overflow-y: scroll;
+}
+.classSchedule img{
+    object-fit: contain;
+    width: 700px;
+    height: 300px;
+}
+
+.classSchedule h3
+{
+    color:#000;
+    text-align: center;
+    background-color: #FFD200;
+}
+.calendarViewContainer img{
+    object-fit: cover;
+    height:200px;
+    width: 200px;
+}
+
+#listView{
+    color: #000;
+    border: #000;
+    border-style: solid;
+}
+
+#calendarView{
+    color: #000;
+    border: red;
+    border-style: solid;
 }

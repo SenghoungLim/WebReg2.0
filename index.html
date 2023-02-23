@@ -232,33 +232,51 @@
                                              <button class = "bag-button"id="open-window"> <img src="./images/newbackpack.png"></button>
                                     </div>
                                 </div>
+
                                 <!-- Each tab has its own content -->
                                 <!-- Schedule of classes tab -->
                                 <div class = "tab-pane active" id = "ScheduleOfClasses">
-                                    <div class = "row margin: 0px">
+                                    <div class = "row">
                                         <!-- Divide into two left and right -->
                                         <div id="ScheduleOfClassesContainerID" class="ScheduleOfClassesContainer">
-                    
                                                 <!-- TABLE GOES HERE-->
                                                 <table id="courses-table">
                                                 </table>
-                                    
-                                            
                                         </div>
 
                                     </div>
                                 </div>
+
+
+
                                 <!-- Study List -->
                                 <div class = "tab-pane" id = "StudyList">
-                                    <div class = "row border g-0 rounded shadow-sm">
+                                    <div class = "row">           
                                         <!-- Divide into two left and right -->
-                                        <div class="col">
-                                            <p style="color: black;"> 
-                                                This is a Study list content!
-                                            </p>
+                                        <div class="underStudyListTabs">
+                                            <ul class = "nav nav-tabs">
+                                                <!-- List Down Each Tab using "nav-item" feature from boostrap -->
+                                                <li class = "nav-item"><a class = "nav-link active" data-bs-toggle="tab" href ="#listView">List View</a></li>
+                                                <li class = "nav-item"><a class = "nav-link" data-bs-toggle="tab" href ="#calendarView">Calendar View</a></li>
+                                            </ul>
+                                            <!-- List View Tab -->
+                                            
+                                            <div class="tab-content two">
+                                                <div class="tab-pane two fade active in" id="listView">
+                                                    <p>Tab 1.1</p>
+                                                </div>
+                                                <!-- Caledendar View -->
+                                                <div class="tab-pane two fade" id="calendarView">
+                                                    
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+
+
+
+
                                 <!-- Suggested Classes -->
                                 <div class = "tab-pane" id = "SuggestedClasses">
                                     <div class = "row border g-0 rounded shadow-sm">

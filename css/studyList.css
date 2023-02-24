@@ -11,3 +11,15 @@
     border-radius: 45%;
     background-color: lavender;
 }
+
+/* .Listview{
+    height:500px;
+    
+} */
+
+#study-list-containerID
+{
+    overflow-y:scroll !important; 
+    overflow: hidden;
+    height: 550px;
+}

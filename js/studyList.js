@@ -156,6 +156,6 @@ enrollButton.addEventListener('click', event => {
     for (var i = 0; i < bag.length; i++) {
         bagList.push(getObject(bag[i]));
     }
-
+    alert('Your course/courses have been enrolled, Check study list for more detail.');
     displayStudyList(bagList);
 });

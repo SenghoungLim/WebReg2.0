@@ -1,16 +1,19 @@
 .ScheduleOfClassesContainer {
     padding: 10px;
+    padding-left: 20px;
 }
 
 table {
     border-collapse: collapse;
     width: calc(100% - 20px);
     table-layout: fixed;
+    border-radius: 50%;
   }
   
 table h4 {
     width: 500px;
-    margin-top: 30px;
+    margin-top: 35px;
+    margin-bottom: 10px;
 
 }
 
@@ -22,17 +25,27 @@ tr {
     text-align: center;
     word-wrap: break-word;
     font-size: 1.25rem;
-
+    padding-top: 5px;
+    padding-bottom: 5px
   }
 
-td:nth-child(10) {
+td:first-child {
+    border-top-left-radius: 20%;
+    border-bottom-left-radius: 20%;
+}
+
+td:last-child {
     border: none;
     text-align: center;
+    border-top-right-radius: 20%;
+    border-bottom-right-radius: 20%;
+
+
 }
 
 
 .table-heading {
-    border-bottom: 10px solid white;
+    border-bottom: 5px solid white;
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -41,18 +54,16 @@ td:nth-child(10) {
     font-size: 1rem;
 }
 
-
-
 .main-course {
-    background-color: #F4F5C1;
+    background-color: #81a0e0;
 }
 
 .discussion {
-    background-color: #ADD8E6;
+    background-color: #b7c2fa;
 }
 
 .lab {
-    background-color: #CBC3E3;
+    background-color: #c1b6e8;
 }
 
 .discussion button,

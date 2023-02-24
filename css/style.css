@@ -435,8 +435,9 @@ a:hover,
 /* Footer CSS */
 
 .footer_wrapper {
-    background-color: var(--black-color);
+    background-color: black;
     padding-bottom: 0rem;
+    text-align: center;
 }
 
 .footer_wrapper .footer-logo img {
@@ -698,11 +699,6 @@ hr.solid{
     border-style: solid;
 }
 
-#calendarView{
-    color: #000;
-    border: red;
-    border-style: solid;
-}
 
 #listView{
     color: #000;
@@ -712,8 +708,6 @@ hr.solid{
 
 #calendarView{
     color: #000;
-    border: red;
-    border-style: solid;
 }
 
 #calendarView img{

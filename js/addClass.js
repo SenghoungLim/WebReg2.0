@@ -211,6 +211,7 @@ const bag = [] // an array to hold the courses in a bag
       if (classAlreadyAdded(rowData[1])) {
         // Main course already added
         // display error message duplicate
+        alert("There may be a duplicate course!");
       }
       else {
         console.log(type);
@@ -228,6 +229,7 @@ const bag = [] // an array to hold the courses in a bag
 
         if (type != 'main-course' && !bag.includes(getLecture(rowData[1]))) {
           // display error message: add lecture first
+          alert("Please add a lecture before proceeding to add lab & discussion.");
         }
         else {
           bag.push(rowData[1]);
@@ -380,6 +382,7 @@ function displayCourses(courses) {
         courseHeading.className = 'course-heading';
 
         courseHeading.innerText  = getObject(code).title;
+        // separator.innerText = "--------------";
 
         const ul = document.createElement('ul');
         ul.id = code + '-list';
@@ -416,12 +419,17 @@ function displayCourses(courses) {
         const right = document.createElement('div');
         right.className = 'right';
 
+        // const separatorLine = document.createElement('div');
+        // separatorLine.className = 'separator';
+
         left.appendChild(removeButton);
         right.appendChild(courseHeading);
         right.appendChild(ul);
+        // separatorLine.appendChild(separator);
 
         li.appendChild(right);
         li.appendChild(left);
+        // li.appendChild(separator)
         
  
         bagList.appendChild(li);

@@ -335,7 +335,7 @@ function displayCourses(courses) {
 
 
   function updateBag() {
-    const notification = document.getElementById('notification');
+    notification = document.getElementById('notification');
     notification.style.display = 'block';
     const backpackImg = document.querySelector('.bag-icon-wrapper .bag-button-class img');
     backpackImg.style.cssText = 'animation: shake 0.3s';

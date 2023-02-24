@@ -16,8 +16,12 @@ openWindowButton.addEventListener('click', () => {
   }, 10); // Wait for the element to be added to the DOM before starting the transition
 
   const closeButton = document.getElementById('bag-window-close');
+
+
   closeButton.style.display = "inline";
   closeButton.addEventListener('click', () => {
+
+    notification.style.display = 'none';
     openWindowButton.style.display = 'inline'; // make the open button appear again
     windowElement.classList.remove('window-open');
     setTimeout(() => {

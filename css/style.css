@@ -216,6 +216,9 @@ a:hover,
     /* padding: 0.5rem 2rem;
     margin: 0px 0.2rem; */
 }
+.navbar-nav{
+    gap: 3rem;
+}
 
 .header .navbar-nav .nav-link.active {
     color: #FFD200;
@@ -239,12 +242,12 @@ a:hover,
     font-family: var(--secondary-font);
 }
 
-.dropdown-toggle::after {
+/* .dropdown-toggle::after {
     content: "+";
     border: none;
     vertical-align: middle;
     font-size: 1.6rem;
-}
+} */
 
 .nav-item:hover>.dropdown-toggle::after,
 .nav-link.dropdown-toggle.show {

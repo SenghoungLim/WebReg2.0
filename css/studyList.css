@@ -1,0 +1,13 @@
+.top {
+    display: flex;
+    width: 900%;
+    align-items: end;
+    justify-content: start;
+}
+
+.top button {
+    width: 80px;
+    height: 40px;
+    border-radius: 45%;
+    background-color: lavender;
+}

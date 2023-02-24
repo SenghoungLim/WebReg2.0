@@ -26,6 +26,7 @@
     <link rel="stylesheet" href = "css/advanced.css">
     <link rel="stylesheet" href = "css/frontPage.css">
     <link rel="stylesheet" href = "css/suggestedClass.css">
+    <link rel="stylesheet" href = "css/studyList.css">
 
 </head>
 
@@ -222,7 +223,7 @@
                                 </div>
                                 <ul id="bag-list"></ul>
                                 <div class="bottom">
-                                    <button id="save-button">Enroll</button>
+                                    <button id="enroll-button">Enroll</button>
                                 </div>
                             </div>
                             <!-- Use boostrap feature "nav" to let them know it is like a menu -->
@@ -286,7 +287,9 @@
                                         
                                         <div class="tab-content two">
                                             <div class="tab-pane two active" id="listView">
-                                                <img src="./images/backpack.png">
+                                                <div class="study-list-container" id="study-list-containerID" >
+                                                    <table id="study-list-table"></table>
+                                                </div>
                                             </div>
                                             <!-- Caledendar View -->
                                             <div class="tab-pane two" id="calendarView">
@@ -447,6 +450,7 @@
     <script src="js/advanced.js"></script>
     <script src="js/suggestedClassTable.js"></script>
     <script src="js/elective.js"></script>
+    <script src="js/studyList.js"></script>
 
 
 </body>

@@ -340,10 +340,10 @@ function displayCourses(courses) {
     notification.style.display = 'block';
 
     const backpackImg = document.querySelector('.bag-icon-wrapper .bag-button-class img');
-    backpackImg.style.cssText = 'animation: shake 0.5s';
+    backpackImg.style.cssText = 'animation: shake 0.3s';
     setTimeout(() => {
       backpackImg.style.cssText = 'animation: none';
-    }, 500)
+    }, 300)
 
     const saveButton = document.getElementById('save-button');
     saveButton.style.display = 'inline';

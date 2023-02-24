@@ -62,11 +62,11 @@ function addRowToTable3(rowData, type) {
         var labCodes = getLabs(rowData[1]);
         console.log(discussionCodes);
         for (var i = 0; i< discussionCodes.length; i++) {
-          const disButton = document.getElementById(discussionCodes[i]).getElementsByTagName('button')[0];
+          const disButton = document.getElementById(discussionCodes[i] + '-elective').getElementsByTagName('button')[0];
           disButton.style.display = 'inline';
         }
         for (var i = 0; i< labCodes.length; i++) {
-          const labButton = document.getElementById(labCodes[i]).getElementsByTagName('button')[0];
+          const labButton = document.getElementById(labCodes[i] + '-elective').getElementsByTagName('button')[0];
           labButton.style.display = 'inline';
         }
       }
@@ -89,13 +89,13 @@ function addRowToTable3(rowData, type) {
 
 function displayCourses3(courses) {
   // Clear previous classes
-  table.textContent = '';
+  table3.textContent = '';
 
   for (let i = 0 ; i < courses.length; i++) {
       // Course title
       const courseTitle = document.createElement('h4');
       courseTitle.textContent = courses[i].title;
-      table.appendChild(courseTitle);
+      table3.appendChild(courseTitle);
   
       // Add the headers row to the table
       addRowToTable3([

@@ -13,3 +13,36 @@
     font-weight: bold;
     color:black;
 }
+.suggestedClassTable{
+    overflow-y: scroll;
+    overflow: hidden;
+    height: auto;
+}
+
+.suggestedClassContainer{
+    overflow-y: scroll;
+    overflow: hidden;
+}
+
+#suggScrollID
+{
+    overflow-y: scroll !important;
+    overflow: hidden;
+}
+.suggScroll{
+    overflow-y: scroll;
+    overflow: hidden;
+    height:300px;
+}
+
+.electScroll{
+    overflow-y: scroll !important;
+    overflow: hidden;
+    height:250px;
+}
+
+#electScrollID
+{
+    overflow-y: scroll !important;
+    overflow: hidden;
+}

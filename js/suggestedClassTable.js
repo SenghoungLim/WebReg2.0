@@ -1,45 +1,159 @@
+// Get the table element from the HTML document
+  const table2 = document.getElementById("suggested-courses-table-id");
+  console.log(table2.id);
 
-  const courses = [
-  
-  new Course("Intro to Programming", "Open", "COMP101", "Lecture", 4, "Dr. Johnson", "MWF 10-11:00 AM", "Building 1 Room 101", 150, 300, 10, 20, "Computer Science", "Fall", [
-    new Discussion("Open", "COMP101A", "Discussion", 1, "John Smith", "M 1-2:00 PM", "Building 1 Room 201", 25, 30, 5, 10, "COMP101"),
-    new Discussion("Open", "COMP101B", "Discussion", 1, "Sarah Lee", "T 1-2:00 PM", "Building 1 Room 202", 25, 25, 5, 10, "COMP101"),
-  ], [
-    new Lab("Open", "COMP101L1", "Lab", 1, "Alex Brown", "F 1-3:00 PM", "Building 2 Room 301", 25, 30, 5, 10, "COMP101"),
-    new Lab("Open", "COMP101L2", "Lab", 1, "Emily Kim", "W 1-3:00 PM", "Building 2 Room 302", 25, 30, 5, 10, "COMP101"),
-  ]),
-  
-  
-  new Course("Calculus I", "Open", "MATH101", "Lecture", 4, "Dr. Lee", "MWF 9-10:00 AM", "Building 1 Room 102", 100, 150, 5, 10, "Mathematics", "Fall", [
-    new Discussion("Open", "MATH101A", "Discussion", 1, "Jessica Chen", "W 10-11:00 AM", "Building 1 Room 203", 25, 30, 5, 10, "MATH101"),
-    new Discussion("Open", "MATH101B", "Discussion", 1, "David Kim", "F 10-11:00 AM", "Building 1 Room 204", 25, 30, 5, 10, "MATH101"),
-  ], [
-    new Lab("Open", "MATH101L1", "Lab", 1, "Chris Lee", "Th 1-3:00 PM", "Building 2 Room 303", 25, 30, 5, 10, "MATH101"),
-    new Lab("Open", "MATH101L2", "Lab", 1, "Jennifer Park", "T 1-3:00 PM", "Building 2 Room 304", 25, 30, 5, 10, "MATH101"),
-  ]),
-  ]
+  // Create a function to add a row to the table
+  function addRowToTable2(rowData, type) {
+    
+    // Create a new row element
+    const row = document.createElement("tr");
+    row.className = type;
+    row.id = rowData[1] + '-suggested';
 
-  const table = document.getElementById("suggested-courses-table-body-id");
-
-  // Loop through courses array data
-  courses.forEach(course => {
-    const row = table.insertRow();
-    // Populate table row with course info
-    row.innerHTML = `
-      <td>${course.name}</td>
-      <td>${course.status}</td>
-      <td>${course.code}</td>
-      <td>${course.classType}</td>
-      <td>${course.credits}</td>
-      <td>${course.instructor}</td>
-      <td>${course.schedule}</td>
-      <td>${course.location}</td>
-      <td>${course.enrolled}</td>
-      <td>${course.capacity}</td>
-      <td>${course.waitlist}</td>
-      <td>${course.availableSeats}</td>
-      <td>${course.department}</td>
-      <td>${course.term}</td>
-    `;
-  });
   
+    // Loop through each cell data and add it to the row
+    for (const data of rowData) {
+      // Create a new cell element
+      const cell = document.createElement("td");
+      
+      // Set the cell's text content to the data
+      cell.textContent = data;
+      
+      // Add the cell to the row
+      row.appendChild(cell);
+    }
+    if (type != 'table-heading') {
+      const cell = document.createElement("td");
+      const addButton = document.createElement('button');
+      addButton.textContent = '+';
+
+      // Adding a class button
+      addButton.addEventListener('click', () => {
+      if (classAlreadyAdded(rowData[1])) {
+        // Main course already added
+        // display error message duplicate
+      }
+      else {
+        console.log(type);
+        if (type=='discussion') {
+          // delete any discussions for the current course if they are in bag already
+          const discusssions = getObject(getLecture(rowData[1])).discussions
+          deleteFromBag(returnOldDiscussion(discusssions));
+        }
+
+        if (type=='lab') {
+          // delete any labs for the current course if they are in bag already
+          const labs = getObject(getLecture(rowData[1])).labs;
+          deleteFromBag(returnOldLab(labs));
+        }
+
+        if (type != 'main-course' && !bag.includes(getLecture(rowData[1]))) {
+          // display error message: add lecture first
+        }
+        else {
+          bag.push(rowData[1]);
+          updateBag();
+        }
+
+
+        // Make the buttons for the discussions/lab pop up after adding a lecture
+        if (type == 'main-course') {
+          var discussionCodes = getDiscussions(rowData[1]);
+          var labCodes = getLabs(rowData[1]);
+          console.log(discussionCodes);
+          for (var i = 0; i< discussionCodes.length; i++) {
+            const disButton = document.getElementById(discussionCodes[i]).getElementsByTagName('button')[0];
+            disButton.style.display = 'inline';
+          }
+          for (var i = 0; i< labCodes.length; i++) {
+            const labButton = document.getElementById(labCodes[i]).getElementsByTagName('button')[0];
+            labButton.style.display = 'inline';
+          }
+        }
+      }
+
+      });
+
+      cell.appendChild(addButton);
+      row.appendChild(cell);
+
+
+    }
+  
+  
+    // Add the row to the table
+    table2.appendChild(row);
+  }
+
+
+
+function displayCourses2(courses) {
+    // Clear previous classes
+    table.textContent = '';
+  
+    for (let i = 0 ; i < courses.length; i++) {
+        // Course title
+        const courseTitle = document.createElement('h4');
+        courseTitle.textContent = courses[i].title;
+        table.appendChild(courseTitle);
+    
+        // Add the headers row to the table
+        addRowToTable2([
+            "Status",
+            "Course Code",
+            "Class Type",
+            "Units",
+            "Instructor",
+            "Schedule",
+            "Location",
+            "Enrollment",
+            "Waitlist",
+        ],'table-heading');
+    
+        // Add course info
+        addRowToTable2([
+            courses[i].status,
+            courses[i].code,
+            courses[i].type,
+            courses[i].units,
+            courses[i].instructor,
+            courses[i].schedule,
+            courses[i].location,
+            courses[i].enrollment,
+            courses[i].waitlist,
+          ],'main-course');
+        
+          // Add the discussion rows for courses[i]
+        for (const discussion of courses[i].discussions) {
+            addRowToTable2([
+              discussion.status,
+              discussion.code,
+              discussion.type,
+              discussion.units,
+              discussion.instructor,
+              discussion.schedule,
+              discussion.location,
+              discussion.enrollment,
+              discussion.waitlist,
+            ],'discussion');
+          }
+        
+          // Add the lab rows for courses[i]
+        for (const lab of courses[i].labs) {
+            addRowToTable2([
+              lab.status,
+              lab.code,
+              lab.type,
+              lab.units,
+              lab.instructor,
+              lab.schedule,
+              lab.location,
+              lab.enrollment,
+              lab.waitlist,
+            ],'lab');
+          }
+  }
+      
+  }
+
+  displayCourses2(courses);

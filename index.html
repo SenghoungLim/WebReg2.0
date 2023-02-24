@@ -314,33 +314,20 @@
                                             </div>
                                             <div class="suggestedClassTable">
                                                 <!-- HTML table markup -->
-                                                <table id="suggested-courses-table-id">
-                                                    <thead>
-                                                    <tr>
-                                                        <th>Course Name</th>
-                                                        <th>Status</th>
-                                                        <th>Course Code</th>
-                                                        <th>Class Type</th>
-                                                        <th>Credits</th>
-                                                        <th>Instructor</th>
-                                                        <th>Schedule</th>
-                                                        <th>Location</th>
-                                                        <th>Enrolled</th>
-                                                        <th>Capacity</th>
-                                                        <th>Waitlist</th>
-                                                        <th>Available Seats</th>
-                                                        <th>Department</th>
-                                                        <th>Term</th>
-                                                    </tr>
-                                                    </thead>
-                                                    <tbody id="suggested-courses-table-body-id">
-                                                    </tbody>
-                                                </table>
+                                                <div class="suggScroll" id = "suggScrollID">
+                                                    <table id="suggested-courses-table-id">
+                                                    </table>
+                                                </div>
+                                               
                                                 
                                             </div>
                                             <div class="majorRequirementHeader">
                                                 <h3> Electives</h3>
                                             </div>
+                                            <div class="electScroll" id = "elecScrollID">
+                                                    <table id="elective-courses-table-id">
+                                                    </table>
+                                                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -458,6 +445,8 @@
     <script src="js/chatButton.js"></script>
     <script src="js/moveBagWindow.js"></script>
     <script src="js/advanced.js"></script>
+    <script src="js/suggestedClassTable.js"></script>
+    <script src="js/elective.js"></script>
 
 
 </body>

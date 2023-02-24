@@ -345,7 +345,7 @@ function displayCourses(courses) {
       backpackImg.style.cssText = 'animation: none';
     }, 300)
 
-    const saveButton = document.getElementById('save-button');
+    const saveButton = document.getElementById('enroll-button');
     saveButton.style.display = 'inline';
     
 

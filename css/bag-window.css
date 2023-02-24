@@ -50,11 +50,12 @@
   }
 
   .button-area {
-    padding-right: 5px;
+    padding-right: 10px;
     display: flex;
     align-items: center;
     justify-content: end;
     gap: 5px;
+    padding:10px;
 
   }
 
@@ -62,10 +63,11 @@
     font-size: 1.2rem;
   }
   #bag-window-close {
-    font-size: 3rem;
+    font-size: 2.5rem;
     background-color: transparent;
     font-weight: 500;
-    font-family: sans-serif
+    font-family: sans-serif;
+  
   }
   
 #bag-window-id {
@@ -74,15 +76,16 @@
     right: 250px;
     top: 430px;
     overflow-y: scroll;
+    width: 400px;
 }
 
 .bag-button-class{
   height:0px;
 
 }
-.bag-icon-wrapper{
+/* .bag-icon-wrapper{
   border: solid;
-}
+} */
 
 #bag-window-id h1,
 #bag-window-id h2,
@@ -111,8 +114,11 @@
 
 
 #bag-list img {
-  width: 20px;
+  width: 40px;
+  padding:10px;
+  margin-top: -10px;
 }
+
 
 .bag-button{
   border:none;
@@ -129,6 +135,7 @@
 
 .course-heading {
   font-weight: bold;
+  padding-top: 1rem;
 }
 
 .discussion-heading {
@@ -143,6 +150,9 @@
 
 ul .left {
   text-align: right;
+  /* padding:1%; */
+  margin-right: 50px;
+  border-bottom:1px solid black;
 }
 
 
@@ -154,6 +164,8 @@ ul .left {
 
 .bottom {
   text-align: center;
+  padding-top: 1.2rem;
+  
 }
 #enroll-button {
   background-color: #0064a4;
@@ -162,4 +174,8 @@ ul .left {
   text-align: center;
   padding: 2px 5px;
   display: none;
+}
+
+.right{
+  padding-left: 1.5rem;
 }

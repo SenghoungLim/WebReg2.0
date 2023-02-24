@@ -3,8 +3,13 @@
     /* bottom: 20px;
     right: 20px; */
     z-index: 3;
-    left:98%;
-    bottom: -00px;
+    left:94%;
+    bottom: 85px;
+    
+  }
+
+  #open-window:active {
+    box-shadow: none;
   }
 
   #notification {
@@ -59,7 +64,8 @@
   #bag-window-close {
     font-size: 3rem;
     background-color: transparent;
-    font-weight: bold;
+    font-weight: 500;
+    font-family: sans-serif
   }
   
 #bag-window-id {

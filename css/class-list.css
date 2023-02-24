@@ -74,4 +74,7 @@ td:last-child {
 td button {
     background-color: transparent;
     font-size: 2.5rem;
+    width: 30px;
+    border-radius: 100%;
+    font-weight:500;
 }

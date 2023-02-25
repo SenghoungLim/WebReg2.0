@@ -1,11 +1,11 @@
 #open-window {
-    position: relative;
+    position: fixed;
     /* bottom: 20px;
     right: 20px; */
     z-index: 3;
-    left:94%;
-    bottom: 85px;
-    
+    right: 0px;
+    top: 120px;
+
   }
 
   #open-window:active {
@@ -76,7 +76,7 @@
     right: 250px;
     top: 430px;
     overflow-y: scroll;
-    width: 400px;
+    width: 250px;
 }
 
 .bag-button-class{
@@ -96,6 +96,11 @@
 #bag-window-id p {
   color: black;
   text-transform: none;
+}
+
+#bag-window-id {
+  right: 0px;
+  top: 40vh;
 }
 
 #bag-window-id h5 {

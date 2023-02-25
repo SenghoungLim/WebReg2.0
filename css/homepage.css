@@ -31,6 +31,10 @@
       background-color: #FFC107;
       color: black;
       text-align: center;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      font-family: sans-serif;
+      font-size: 1.7rem;
     }
     
     .collapse-btn img {

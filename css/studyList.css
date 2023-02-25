@@ -12,14 +12,10 @@
     background-color: lavender;
 }
 
-/* .Listview{
-    height:500px;
-    
-} */
-
 #study-list-containerID
 {
     overflow-y:scroll !important; 
     overflow: hidden;
-    height: 550px;
+    height: 85vh;
+    margin-left: 15px;
 }

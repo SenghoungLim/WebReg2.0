@@ -55,15 +55,15 @@ td:last-child {
 }
 
 .main-course {
-    background-color: #81a0e0;
+    background-color: rgb(163, 193, 240);
 }
 
 .discussion {
-    background-color: #b7c2fa;
+    background-color: rgb(226, 238, 255);
 }
 
 .lab {
-    background-color: #c1b6e8;
+    background-color: rgb(251, 246, 208);
 }
 
 .discussion button,

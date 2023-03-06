@@ -140,7 +140,32 @@ const bag = [] // an array to hold the courses in a bag
       if (classAlreadyAdded(rowData[1])) {
         // Main course already added
         // display error message duplicate
-        alert("There may be a duplicate course!");
+        //alert("There may be a duplicate course!");
+
+        //Create alert message div
+        const notifyDiv = document.createElement('div');
+        notifyDiv.id = 'dupNotifyID'; //add id
+
+        //Create the p tag message within div
+        const dupMsg = document.createElement('p');
+        //Add id to the dupMsg class
+        dupMsg.id = 'dupMsgID';
+        //Add the text to the p tag
+        dupMsg.textContent = 'There may be a duplicate course!';
+        //Add the p tag under the div class 
+        notifyDiv.appendChild(dupMsg);
+
+        const dupCloseBtn = document.createElement('button');
+        dupCloseBtn.id = 'dupCloseBtnID';
+        dupCloseBtn.textContent = 'Close';
+
+        dupCloseBtn.addEventListener('click', () => {
+          document.body.removeChild(dupNotifyID);
+        });
+
+        notifyDiv.appendChild(dupCloseBtn);
+        document.body.appendChild(notifyDiv);
+
       }
       else {
         console.log(type);

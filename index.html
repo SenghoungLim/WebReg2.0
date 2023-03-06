@@ -28,7 +28,7 @@
     <link rel="stylesheet" href = "css/suggestedClass.css">
     <link rel="stylesheet" href = "css/studyList.css">
     <link rel="stylesheet" href = "css/notifyPopUp.css">
-
+    <link rel="stylesheet" href = "css/auto-enroll-btn.css">
 </head>
 
 <body class="home">
@@ -226,6 +226,7 @@
                                 <ul id="bag-list"></ul>
                                 <div class="bottom">
                                     <button id="enroll-button">Enroll</button>
+                                    <button id= "auto-enroll-button">Auto Enroll</button>
                                 </div>
                             </div>
                             <!-- Use boostrap feature "nav" to let them know it is like a menu -->
@@ -290,6 +291,7 @@
                                         <div class="tab-content two">
                                             <div class="tab-pane two active" id="listView">
                                                 <div class="study-list-container" id="study-list-containerID" >
+                                                    <p id = "defaultListViewPage">You have not enrolled in any courses yet.</p>
                                                     <table id="study-list-table"></table>
                                                 </div>
                                             </div>
@@ -454,7 +456,7 @@
     <script src="js/suggestedClassTable.js"></script>
     <script src="js/elective.js"></script>
     <script src="js/studyList.js"></script>
-
+    <script src="js/auto-enroll.js"></script>
 
 </body>
 

@@ -141,17 +141,17 @@ const bag = [] // an array to hold the courses in a bag
         // Main course already added
         // display error message duplicate
         //alert("There may be a duplicate course!");
-
+        
         //Create alert message div
         const notifyDiv = document.createElement('div');
         notifyDiv.id = 'dupNotifyID'; //add id
-
+       
         //Create the p tag message within div
         const dupMsg = document.createElement('p');
         //Add id to the dupMsg class
         dupMsg.id = 'dupMsgID';
         //Add the text to the p tag
-        dupMsg.textContent = 'There may be a duplicate course!';
+        dupMsg.textContent = 'You cannot add the same class twice.';
         //Add the p tag under the div class 
         notifyDiv.appendChild(dupMsg);
 
@@ -162,7 +162,7 @@ const bag = [] // an array to hold the courses in a bag
         dupCloseBtn.addEventListener('click', () => {
           document.body.removeChild(dupNotifyID);
         });
-
+        console.log('add + notification');
         notifyDiv.appendChild(dupCloseBtn);
         document.body.appendChild(notifyDiv);
 
@@ -300,8 +300,9 @@ function displayCourses(courses) {
     }, 300)
 
     const saveButton = document.getElementById('enroll-button');
+    const autoEnrollButton = document.getElementById('auto-enroll-button');
     saveButton.style.display = 'inline';
-    
+    autoEnrollButton.style.display = 'inline';
 
     const bagList = document.getElementById('bag-list');
     bagList.innerHTML = ''; // Clear the previous list

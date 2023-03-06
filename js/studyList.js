@@ -149,13 +149,32 @@ function displayStudyList(bagList) {
   }
 }
 
-
 enrollButton = document.getElementById('enroll-button');
 enrollButton.addEventListener('click', event => {
     const bagList = []
     for (var i = 0; i < bag.length; i++) {
         bagList.push(getObject(bag[i]));
     }
-    alert('Your course/courses have been enrolled, Check study list for more detail.');
+    // alert('Your course/courses have been enrolled, Check study list for more detail.');
+    //Hidden default text once they clicked enrolled.
+
+    const listViewDefaultPage = document.getElementById('defaultListViewPage');
+    listViewDefaultPage.style.display= 'none';
+    //Create a div
+    const enrollNotifyDiv = document.createElement('div');
+    enrollNotifyDiv.id = 'enrollNotifyID'; //add id
+    //Create the p tag message within div
+    const enrollMsg = document.createElement('p');
+    //Add id to the enroll msg class
+    enrollMsg.id = 'enrollMsgID';
+    //Add the text to the p tag
+    enrollMsg.textContent = 'Your course/courses have been enrolled, Check study list for more detail.';
+    //Add the p tag under the div class 
+    enrollNotifyDiv.appendChild(enrollMsg);
+
+    document.body.appendChild(enrollNotifyDiv);
+    enrollNotifyDiv.addEventListener('animationend', () => {
+        enrollNotifyDiv.remove();
+    });
     displayStudyList(bagList);
 });

@@ -1,6 +1,7 @@
+/* Duplicate class alert CSS */
 #dupNotifyID {
     position: fixed;
-    bottom: 10px;
+    bottom: 70%;
     left: 50%;
     transform: translateX(-50%);
     background-color: #fff;
@@ -9,7 +10,6 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     padding: 10px;
     font-size: 14px;
-    animation: fadeOut 3s ease;
   }
   
   #dupCloseBtnID {
@@ -25,4 +25,38 @@
   }
   #dupCloseBtnID:hover {
     background-color: #ccc;
+  }
+
+/* Enroll button alert CSS */
+#enrollNotifyID {
+    position: fixed;
+    bottom: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    font-size: 14px;
+    animation: fadeOut 3s ease;
+  }
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  #enrollMsgID
+  {
+    color:black;
+  }
+  
+  #defaultListViewPage{
+    color: black;
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 20%;
   }

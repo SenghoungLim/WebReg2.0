@@ -1,2 +1,2 @@
 # WebReg2.0
-Thi is a design for Web Reg Hackathon
+This is a design for the WebReg Hackathon

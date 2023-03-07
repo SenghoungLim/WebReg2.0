@@ -142,8 +142,8 @@ const bag = [] // an array to hold the courses in a bag
 
       // Adding a class button
       addButton.addEventListener('click', () => {
-        const defaultBagWindowText = document.getElementById('defaultBagWindowTxtID');
-        defaultBagWindowText.style.display = "none";
+      const defaultWindowBag = document.getElementById('defaultWindowTxtID');
+      defaultWindowBag.style.display = 'none';
       if (classAlreadyAdded(rowData[1])) {
         // Main course already added
         

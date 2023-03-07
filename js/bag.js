@@ -1,11 +1,19 @@
 const openWindowButton = document.getElementById('open-window');
-
+let clickCount = 0;
 openWindowButton.addEventListener('click', () => {
+    clickCount++;
     const notification = document.getElementById('notification')
     notification.style.display = 'none';
 
   const windowElement = document.getElementById('bag-window-id'); // create window
   windowElement.style.display = 'inline';
+
+  // Create a default text before a course is added
+    // const defaultBagWindowTxt = document.createElement('p');
+    // defaultBagWindowTxt.id = "defaultBagWindowTxtID";
+    // defaultBagWindowTxt.textContent = "You have not added any courses yet.";
+    // windowElement.appendChild(defaultBagWindowTxt);
+
 
   //windowElement.textContent = 'hi';
   windowElement.classList.add('window');
@@ -21,11 +29,6 @@ openWindowButton.addEventListener('click', () => {
   }, 10); // Wait for the element to be added to the DOM before starting the transition
 
   const closeButton = document.getElementById('bag-window-close');
-  // Create a default text before a course is added
-  const defaultBagWindowTxt = document.createElement('p');
-  defaultBagWindowTxt.id = "defaultBagWindowTxtID";
-  defaultBagWindowTxt.textContent = "You have not added any courses yet.";
-  windowElement.appendChild(defaultBagWindowTxt);
 
   closeButton.style.display = "inline";
   closeButton.addEventListener('click', () => {

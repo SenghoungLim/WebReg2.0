@@ -29,9 +29,9 @@ function displayCoursesByTitle(title) {
   
   // Display filtered courses
   courses2.forEach(course => {
-    const courseDiv = document.createElement("div");
-    courseDiv.textContent = course.title;
-    searchResults.appendChild(courseDiv);
+    const courseButton = document.createElement("button");
+    courseButton.textContent = course.title;
+    searchResults.appendChild(courseButton);
   });
 }
 

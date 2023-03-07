@@ -137,6 +137,8 @@ const bag = [] // an array to hold the courses in a bag
 
       // Adding a class button
       addButton.addEventListener('click', () => {
+        const defaultBagWindowText = document.getElementById('defaultBagWindowTxtID');
+        defaultBagWindowText.style.display = "none";
       if (classAlreadyAdded(rowData[1])) {
         // Main course already added
         
@@ -476,7 +478,7 @@ function displayCourses(courses) {
   classForm.addEventListener('submit', event => {
     console.log("heyy");
     const anteater = document.getElementById('initialOpenPageID');
-    anteater.style.display = "none"
+    anteater.style.display = "none";
     console.log("clicked")
     event.preventDefault();
     let term = document.getElementById('term').value;

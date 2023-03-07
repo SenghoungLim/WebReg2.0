@@ -195,7 +195,45 @@ const bag = [] // an array to hold the courses in a bag
 
         if (type != 'main-course' && !bag.includes(getLecture(rowData[1]))) {
           // display error message: add lecture first
-          alert("Please add a lecture before proceeding to add lab & discussion.");
+          //alert("Please add a lecture before proceeding to add lab & discussion.");
+          //ERROR PREVENTION Message: When a user add lab & dis before lec
+            //START
+            const disLabNotify = document.createElement('div');
+            disLabNotify.className = 'disLabNotifyClassName';
+          
+            //Icon
+            const warningIcon = document.createElement('img');
+            warningIcon.src = './images/warningSignIcon.webp';
+            warningIcon.alt = 'Warning Icon';
+            warningIcon.className= 'warningSignIcon';
+            //Message
+            const dupMsg = document.createElement('span');
+            dupMsg.className = 'dupMsg';
+            dupMsg.textContent = 'Please add a lecture before proceeding to add lab & discussion.';
+            
+            //Add to the notification body 
+            disLabNotify.appendChild(warningIcon);
+            disLabNotify.appendChild(dupMsg);
+
+            disLabNotify.id = 'disLabNotifyID';
+              // Append the notification element to the body
+              document.body.appendChild(disLabNotify);
+              console.log('Dis & Lab added before lecture warning');
+              // Wait for a moment to trigger the transition
+              setTimeout(() => {
+                disLabNotify.classList.add('active');
+              }, 0);
+
+              // Wait for 3 seconds before removing the notification element
+              setTimeout(() => {
+                disLabNotify.classList.remove('active');
+
+                // Wait for the transition to complete before removing the element from the DOM
+                setTimeout(() => {
+                  disLabNotify.parentNode.removeChild(disLabNotify);
+              }, 300);
+            }, 3000);
+            //END
         }
         else {
           bag.push(rowData[1]);

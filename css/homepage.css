@@ -199,3 +199,23 @@
   .second-header {
     margin-top: 25px;
   }
+
+
+  /* SEARCH */
+
+  .search {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  #search-results {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  #search-results button {
+    background-color: transparent;
+  }

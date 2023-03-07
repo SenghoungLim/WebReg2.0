@@ -3,14 +3,18 @@
 
 const bag = [] // an array to hold the courses in a bag
 
-  function filterCourses(term, instructor, department) {
+  function filterCourses(title, term, instructor, department) {
     let filteredCourses = courses.filter(course => {
+      let titleMatch = title === '' || course.title === title;
       let termMatch = term === '' || course.term === term;
+      console.log(titleMatch, termMatch);
 
-      return termMatch;
+      return titleMatch && termMatch;
     });
     return filteredCourses;
   }
+
+ 
 
   function getObject(code) {
     // search courses
@@ -441,10 +445,12 @@ function displayCourses(courses) {
     anteater.style.display = "none"
     console.log("clicked")
     event.preventDefault();
+    let title = document.getElementById('course-search').value;
     let term = document.getElementById('term').value;
     let instructor = document.getElementById('instructor').value;
     let department = document.getElementById('department').value;
-    let filteredCourses = filterCourses(term, instructor, department);
+    let filteredCourses = filterCourses(title, term, instructor, department);
     displayCourses(filteredCourses);
   });
   
+

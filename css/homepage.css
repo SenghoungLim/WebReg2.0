@@ -213,9 +213,14 @@
     background-color: white;
     display: flex;
     flex-direction: column;
-    align-items: start;
   }
 
   #search-results button {
     background-color: transparent;
+    width: 100%;
+    text-align: start;
+  }
+
+  #search-results button:hover {
+    background-color: #b1dcf6;
   }

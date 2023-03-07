@@ -31,6 +31,11 @@ function displayCoursesByTitle(title) {
   courses2.forEach(course => {
     const courseButton = document.createElement("button");
     courseButton.textContent = course.title;
+    courseButton.addEventListener("click", event => {
+    searchInput.value = course.title;
+    searchResults.innerHTML = '';
+    });
+
     searchResults.appendChild(courseButton);
   });
 }
@@ -52,25 +57,22 @@ function displayCoursesByTitle(title) {
   });
 
 
+  function loadCourse(title) {
+    console.log(title);
+  }
 
 
 
 
-    // let resultsHtml = "";
-
-
-    // // Loop through each course option and check if it matches the search term
-    // document.querySelectorAll("#course-code option").forEach((option) => {
-    //   const courseName = option.text.toLowerCase();
-    //   if (courseName.includes(searchTerm)) {
-    //     resultsHtml += `<div>${courseName}</div>`;
-    //   }
-    // });
-  
-    // // Display the search results
-    // searchResults.innerHTML = resultsHtml;
-  
-  
-  
-  
-  
+// classForm.addEventListener('submit', event => {
+//   console.log("heyy");
+//   const anteater = document.getElementById('initialOpenPageID');
+//   anteater.style.display = "none"
+//   console.log("clicked")
+//   event.preventDefault();
+//   let term = document.getElementById('term').value;
+//   let instructor = document.getElementById('instructor').value;
+//   let department = document.getElementById('department').value;
+//   let filteredCourses = filterCourses(term, instructor, department);
+//   displayCourses(filteredCourses);
+// });

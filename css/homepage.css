@@ -31,10 +31,11 @@
       background-color: #FFC107;
       color: black;
       text-align: center;
-      padding-top: 5px;
-      padding-bottom: 5px;
-      font-family: sans-serif;
+      padding-top: 10px;
+      padding-bottom: 10px;
       font-size: 1.7rem;
+      font-family: var(--primary-font);
+      font-weight: 600;
     }
     
     .collapse-btn img {
@@ -121,14 +122,15 @@
   }
   
   /* Styles for the dropdown lists */
-  .panel-content select {
+  .panel-content select,
+  #course-search {
     display: block;
     width: 100%;
     padding: 10px;
-    font-size: 1rem;
+    font-size: 1.5rem;
     margin-bottom: 10px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 5px;
     box-sizing: border-box;
   }
   
@@ -207,12 +209,17 @@
     display: flex;
     flex-direction: column;
     gap: 2px;
+    margin-bottom: 10px;
   }
 
   #search-results {
-    background-color: white;
+    background-color: rgb(241, 241, 241);
     display: flex;
     flex-direction: column;
+    max-height: 200px;
+    overflow-y: scroll;
+    border: 1px rgb(121, 122, 142) solid;
+    border-radius: 2px;
   }
 
   #search-results button {
@@ -224,3 +231,4 @@
   #search-results button:hover {
     background-color: #b1dcf6;
   }
+

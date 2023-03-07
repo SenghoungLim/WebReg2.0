@@ -163,6 +163,10 @@
     background-color: #FFA000;
   }
 
+  .circle-button:active {
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.3);
+  }
+
 
 
   /* RIGHT SIDE */

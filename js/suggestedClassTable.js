@@ -93,8 +93,10 @@ function displayCourses2(courses) {
   
     for (let i = 0 ; i < courses.length; i++) {
         // Course title
-        const courseTitle = document.createElement('h4');
-        courseTitle.textContent = courses[i].title;
+
+        const courseTitle = document.createElement('div');
+        courseTitle.className = 'course-titles';
+        courseTitle.textContent = courses[i].code + '\t-\t' + courses[i].title;
         table2.appendChild(courseTitle);
     
         // Add the headers row to the table

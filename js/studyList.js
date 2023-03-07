@@ -67,8 +67,9 @@ function displayStudyList(bagList) {
             top.className = 'top';
 
 
-            const courseTitle = document.createElement('h4');
-            courseTitle.textContent = bagList[i].title;
+            const courseTitle = document.createElement('div');
+            courseTitle.className = 'course-titles';
+            courseTitle.textContent = bagList[i].code + '\t-\t' + bagList[i].title;
             const drop = document.createElement('button');
             drop.textContent = 'DROP';
 

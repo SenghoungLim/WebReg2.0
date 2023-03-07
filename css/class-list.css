@@ -46,13 +46,14 @@ td:last-child {
 
 
 .table-heading {
-    border-bottom: 5px solid white;
     text-transform: uppercase;
     font-weight: bold;
+    padding-bottom: 0px;
 }
 
 .table-heading * {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    height: 30px;
 }
 
 .main-course {
@@ -78,4 +79,10 @@ td button {
     width: 30px;
     border-radius: 100%;
     font-weight:500;
+}
+
+.course-titles {
+    width: 350px;
+    margin-top: 30px;
+    font-size: 2rem;
 }

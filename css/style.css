@@ -763,7 +763,7 @@ button:hover {
   .peterImgClass img
   {
     object-fit: cover;
-    border-radius: 5%;
+    border-radius: 20px;
     padding: 8px;
     padding-bottom: 15px;
     opacity: 0.8;

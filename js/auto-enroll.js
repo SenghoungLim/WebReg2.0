@@ -1,48 +1,38 @@
-// // A modal pop up for auto enroll btn
-//     // Create modal elements
-//     const modal = document.createElement("div");
-//     modal.id = "modal";
+const autoEnrollButton = document.getElementById('auto-enroll-button');
 
-//     const modalContent = document.createElement("div");
-//     modalContent.id= "modal-content";
+autoEnrollButton.addEventListener('click', () => {
+  // Get the modal element
+  const modal = document.createElement('div');
+  modal.classList.add('modal');
 
-//     const closeBtn = document.createElement("span");
-//     closeBtn.classList.add("close");
-//     closeBtn.innerHTML = "&times;";
+  // Create the modal content
+  const modalContent = document.createElement('div');
+  modalContent.classList.add('modal-content');
+  
+  // Create the close button
+  const confirmButton = document.createElement('button');
+  confirmButton.classList.add('confirm');
+  confirmButton.textContent = 'Understood';
+  confirmButton.addEventListener('click', () => {
+  // Add your confirmation logic here
+  modal.style.display = 'none';
+  });
+  
+  // Create the modal message
+  const message = document.createElement('p');
+  message.id = 'modalMsgID';
+  message.textContent = 'We would like to inform you that by utilizing our "Auto Enroll" feature, your course preferences will be securely saved and enrolled once your enrollment window becomes available. In the event that a class is already filled to capacity, our system will prioritize your enrollment by adding you to the waitlist of the first available course. You will be notified of any updates regarding your enrolled or waitlisted courses via email.';
+  
+  // Add the close button and message to the modal content
+  modalContent.appendChild(confirmButton);
+  modalContent.appendChild(message);
+  
+  // Add the modal content to the modal
+  modal.appendChild(modalContent);
+  
+  // Append the modal to the document body
+  document.body.appendChild(modal);
 
-//     const modalTitle = document.createElement("h2");
-//     modalTitle.textContent = "Modal Title";
-
-//     const modalText = document.createElement("p");
-//     modalText.textContent = "Modal content goes here.";
-
-//     // Append elements to modal
-//     modalContent.appendChild(closeBtn);
-//     modalContent.appendChild(modalTitle);
-//     modalContent.appendChild(modalText);
-
-//     modal.appendChild(modalContent);
-
-//     // Append modal to body
-//     document.body.appendChild(modal);
-
-    // Create button event listener
-    const autoEnrollBtnModal = document.getElementById('auto-enroll-button');
-    autoEnrollBtnModal.addEventListener("click", function() {
-      //modal.style.display = "block";
-      console.log = "hi"
-    });
-
-    // Create close button event listener
-    // closeBtn.addEventListener("click", function() {
-    //   modal.style.display = "none";
-    // });
-
-    // // Create window event listener to close modal when clicking outside of it
-    // window.addEventListener("click", function(event) {
-    //   if (event.target == modal) {
-    //     modal.style.display = "none";
-    //   }
-    // });
-
-    //End modal pop up for auto enroll btn
+  // Show the modal
+  modal.style.display = 'block';
+});

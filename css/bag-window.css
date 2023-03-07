@@ -182,10 +182,11 @@ ul .left img{
 #enroll-button {
   background-color: #0064a4;
   color: white;
-  border-radius: 10%;
+  border-radius: 10px;
   text-align: center;
-  padding: 2px 5px;
+  /* padding: 2px 5px; */
   display: none;
+  width: 12rem;
 }
 
 .right{

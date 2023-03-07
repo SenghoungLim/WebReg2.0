@@ -743,7 +743,7 @@ hr.solid{
 
 button {
     cursor: pointer;
-    transition: 0.2s all;
+    transition: all 0.2s ease-in-out;
 
 }
 

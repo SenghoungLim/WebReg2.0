@@ -25,37 +25,54 @@
   top: 20%;
 }
 
-/* Enroll button alert CSS */
-#enrollNotifyID {
+/* User add a dis & lab before lecture */
+.disLabNotifyClassName {
   position: fixed;
-  top: -50px;
-  left: 0;
-  width: 100%;
-  background-color: #4CAF50;
-  color: white;
-  text-align: center;
-  padding: 20px;
+  top: 10%;
+  left: 35%;
+  right: 35%;
+  width: 30%;
+  background-color: white;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 10px;
   transition: top 0.5s ease-in-out;
-  animation: hide-notification 5s forwards;
+  font-weight:bold;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /* transition: 0.2s; */
 }
 
-@keyframes hide-notification {
-  0% {
-    top: 0;
-  }
-  90% {
-    top: 0;
-  }
-  100% {
-    top: -50px;
-  }
+.disLabNotifyClassName.active {
+  top: 20%;
 }
 
-  #enrollMsgID
-  {
-    color:black;
-  }
-  
+/* Enroll button alert CSS */
+/* User add a dis & lab before lecture */
+.greenCheckSignIcon{
+  width: 2rem;
+}
+.enrollNotifyClassName {
+  position: fixed;
+  top: 10%;
+  left: 35%;
+  right: 35%;
+  width: 30%;
+  background-color: white;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  transition: top 0.5s ease-in-out;
+  font-weight:bold;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /* transition: 0.2s; */
+}
+
+.enrollNotifyClassName.active {
+  top: 20%;
+}
+/* Default List View */
   #defaultListViewPage{
     color: black;
     text-align: center;

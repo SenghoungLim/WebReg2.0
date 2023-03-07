@@ -157,7 +157,44 @@ enrollButton.addEventListener('click', event => {
     }
     // alert('Your course/courses have been enrolled, Check study list for more detail.');
     //Hidden default text once they clicked enrolled.
+    //Confirmation Alert: Confirm that a user enrolled in a class
+            //START
+            const enrollNotify = document.createElement('div');
+            enrollNotify.className = 'enrollNotifyClassName';
+          
+            //Icon
+            const warningIcon = document.createElement('img');
+            warningIcon.src = './images/greenCheck.png';
+            warningIcon.alt = 'Green Check Icon';
+            warningIcon.className= 'greenCheckSignIcon';
+            //Message
+            const dupMsg = document.createElement('span');
+            dupMsg.className = 'dupMsg';
+            dupMsg.textContent = 'Your course/courses have been enrolled, Check study list to view it.';
+            
+            //Add to the notification body 
+            enrollNotify.appendChild(warningIcon);
+            enrollNotify.appendChild(dupMsg);
 
+            enrollNotify.id = 'disLabNotifyID';
+              // Append the notification element to the body
+              document.body.appendChild(enrollNotify);
+              console.log('Dis & Lab added before lecture warning');
+              // Wait for a moment to trigger the transition
+              setTimeout(() => {
+                enrollNotify.classList.add('active');
+              }, 0);
+
+              // Wait for 3 seconds before removing the notification element
+              setTimeout(() => {
+                enrollNotify.classList.remove('active');
+
+                // Wait for the transition to complete before removing the element from the DOM
+                setTimeout(() => {
+                    enrollNotify.parentNode.removeChild(enrollNotify);
+              }, 300);
+            }, 3000);
+            //END
     const listViewDefaultPage = document.getElementById('defaultListViewPage');
     listViewDefaultPage.style.display= 'none';
     //Create a div

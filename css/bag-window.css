@@ -63,6 +63,7 @@
     font-size: 1.2rem;
   }
   #bag-window-close {
+    display: sticky;
     font-size: 2.5rem;
     background-color: transparent;
     font-weight: 500;

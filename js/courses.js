@@ -50,7 +50,55 @@ function Course(title, status, code, type, units, instructor, schedule, location
     this.lectureCode = lectureCode;
   }
 
+// const courses = [];
+// var count = 0;
+
+// function getData(data) {
+//   for (i of data) {
+//     count ++;
+//     console.log(count);
+//     if (count %100 == 0) {  // EVERY 100 classes we add a class
+//       if (i.terms.includes("2022 Spring")){
+//         i.terms = 'Spring';
+//       }
   
+//       else if (i.terms.includes("2022 Winter")){
+//         i.terms = "Winter";
+//       }
+      
+//       else if (i.terms.includes("2022 Fall")){
+//         i.terms = 'Fall';
+//       }
+//       else {
+//         continue;
+//       }
+  
+//       courses.push(
+//         new Course(i.id, "Open", i.id, "Lecture", i.units[0], "STAFF", "MWF 10-11:00 AM", "Building 1 Rm 101", 150, 300, 10, 20, i.department_name, i.terms, [
+//           new Discussion("Open", i.id+'-A', "Dis", 0, "STAFF", "M 1-2:00 PM", "Building 1 Rm 201", 25, 30, 5, 10, i.id),
+//           new Discussion("Open", i.id+'-B', "Dis", 0, "STAFF", "T 1-2:00 PM", "Building 1 Rm 202", 25, 25, 5, 10, i.id),
+//         ], [
+//           new Lab("Open", i.id+'-L1', "Lab", 0, "STAFF", "F 1-3:00 PM", "Building 2 Rm 301", 25, 30, 5, 10, i.id),
+//           new Lab("Open", i.id+'-L2', "Lab", 0, "STAFF", "W 1-3:00 PM", "Building 2 Rm 302", 25, 30, 5, 10, i.id),
+//         ]),)
+//     }
+//     }
+
+// }
+
+
+// fetch('https://api.peterportal.org/rest/v0/courses/all', {
+//    headers: {
+//       'Accept': 'application/json'
+//    }
+// })  .then(response => response.json())
+// .then(data => {
+//   getData(data)
+// });
+
+
+
+
 const courses = [
 
     // 1

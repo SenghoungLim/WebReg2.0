@@ -5,11 +5,12 @@ const bag = [] // an array to hold the courses in a bag
 
   function filterCourses(title, term, instructor, department) {
     let filteredCourses = courses.filter(course => {
-      let titleMatch = title === '' || course.title === title;
-      let termMatch = term === '' || course.term === term;
-      console.log(titleMatch, termMatch);
+      let titleMatch = title === '' || course.title.toLowerCase() === title.toLowerCase();
+      let termMatch = term === '' || course.term.toLowerCase() === term.toLowerCase();
+      let instructorMatch = instructor === '' || course.instructor.toLowerCase() === instructor.toLowerCase();
+      let departmentMatch = department === '' || course.department.toLowerCase() === department.toLowerCase();
 
-      return titleMatch && termMatch;
+      return titleMatch && termMatch && instructorMatch && departmentMatch;
     });
     return filteredCourses;
   }

@@ -54,7 +54,7 @@ function Course(title, status, code, type, units, instructor, schedule, location
 const courses = [
 
     // 1
-    new Course("Intro to Programming", "Open", "COMP101", "Lecture", 4, "Dr. Johnson", "MWF 10-11:00 AM", "Building 1 Room 101", 150, 300, 10, 20, "Computer Science", "Spring", [
+    new Course("Intro to Programming", "Open", "COMP101", "Lecture", 4, "Johnson", "MWF 10-11:00 AM", "Building 1 Room 101", 150, 300, 10, 20, "Computer Science", "Spring", [
       new Discussion("Open", "COMP101A", "Dis", 1, "John Smith", "M 1-2:00 PM", "Building 1 Room 201", 25, 30, 5, 10, "COMP101"),
       new Discussion("Open", "COMP101B", "Dis", 1, "Sarah Lee", "T 1-2:00 PM", "Building 1 Room 202", 25, 25, 5, 10, "COMP101"),
     ], [
@@ -65,7 +65,7 @@ const courses = [
 
 
     //2
-    new Course("Calculus I", "Open", "MATH101", "Lecture", 4, "Dr. Lee", "MWF 9-10:00 AM", "Building 1 Room 102", 100, 150, 5, 10, "Mathematics", "Fall", [
+    new Course("Calculus I", "Open", "MATH101", "Lecture", 4, "Lee", "MWF 9-10:00 AM", "Building 1 Room 102", 100, 150, 5, 10, "Mathematics", "Fall", [
       new Discussion("Open", "MATH101A", "Dis", 1, "Jessica Chen", "W 10-11:00 AM", "Building 1 Room 203", 25, 30, 5, 10, "MATH101"),
       new Discussion("Open", "MATH101B", "Dis", 1, "David Kim", "F 10-11:00 AM", "Building 1 Room 204", 25, 30, 5, 10, "MATH101"),
     ], [
@@ -75,7 +75,7 @@ const courses = [
 
 
     //3
-    new Course("Introduction to Psychology", "Open", "PSYC101", "Lecture", 3, "Dr. Williams", "MWF 11-12:00 PM", "Building 1 Room 105", 120, 150, 5, 10, "Psychology", "Fall", [
+    new Course("Introduction to Psychology", "Open", "PSYC101", "Lecture", 3, "Williams", "MWF 11-12:00 PM", "Building 1 Room 105", 120, 150, 5, 10, "Psychology", "Fall", [
       new Discussion("Open", "PSYC101A", "Dis", 1, "John Doe", "T 1-2:00 PM", "Building 1 Room 210", 25, 30, 5, 10, "PSYC101"),
       new Discussion("Open", "PSYC101B", "Dis", 1, "Jane Smith", "W 1-2:00 PM", "Building 1 Room 211", 25, 25, 5, 10, "PSYC101"),
     ], [
@@ -85,7 +85,7 @@ const courses = [
 
 
     //4
-    new Course("General Chemistry", "Open", "CHEM101", "Lecture", 4, "Dr. Brown", "MWF 1-2:00 PM", "Building 1 Room 106", 200, 250, 5, 10, "Chemistry", "Fall", [
+    new Course("General Chemistry", "Open", "CHEM101", "Lecture", 4, "Brown", "MWF 1-2:00 PM", "Building 1 Room 106", 200, 250, 5, 10, "Chemistry", "Fall", [
       new Discussion("Open", "CHEM101A", "Dis", 1, "Bob Smith", "T 3-4:00 PM", "Building 1 Room 220", 25, 30, 5, 10, "CHEM101"),
       new Discussion("Open", "CHEM101B", "Dis", 1, "Jane Doe", "W 3-4:00 PM", "Building 1 Room 221", 25, 25, 5, 10, "CHEM101"),
     ], [
@@ -95,7 +95,7 @@ const courses = [
 
 
     //5
-    new Course("Environmental Science", "Open", "ENVSCI101", "Lecture", 3, "Dr. Green", "TTh 9:30-10:45 AM", "Science Hall 101", 90, 120, 20, 30, "Environmental Science", "Winter", [
+    new Course("Environmental Science", "Open", "ENVSCI101", "Lecture", 3, "Green", "TTh 9:30-10:45 AM", "Science Hall 101", 90, 120, 20, 30, "Environmental Science", "Winter", [
         new Discussion("Open", "ENVSCI101A", "Dis", 1, "David Rodriguez", "W 11:00-12:00 PM", "Science Hall 202", 20, 25, 5, 10, "ENVSCI101"),
         new Discussion("Open", "ENVSCI101B", "Dis", 1, "Emily Nguyen", "Th 12:00-1:00 PM", "Science Hall 203", 20, 25, 5, 10, "ENVSCI101"),
       ], [
@@ -106,7 +106,7 @@ const courses = [
 
 
       //6
-      new Course("Introduction to Sociology", "Open", "SOC101", "Lecture", 3, "Dr. Garcia", "MWF 11:00-12:15 PM", "Social Sciences Building 101", 150, 200, 15, 20, "Sociology", "Fall", [
+      new Course("Introduction to Sociology", "Open", "SOC101", "Lecture", 3, "Garcia", "MWF 11:00-12:15 PM", "Social Sciences Building 101", 150, 200, 15, 20, "Sociology", "Fall", [
         new Discussion("Open", "SOC101A", "Dis", 1, "Juan Hernandez", "T 10:00-11:00 AM", "Social Sciences Building 201", 30, 35, 5, 10, "SOC101"),
         new Discussion("Open", "SOC101B", "Dis", 1, "Maria Gonzalez", "Th 10:00-11:00 AM", "Social Sciences Building 202", 30, 35, 5, 10, "SOC101"),
       ], [
@@ -116,7 +116,7 @@ const courses = [
 
 
       //7
-      new Course("Psychology", "Open", "PSYCH101", "Lecture", 3, "Dr. Kim", "MWF 9:00-10:15 AM", "Psychology Building 101", 150, 200, 15, 20, "Psychology", "Winter", [
+      new Course("Psychology", "Open", "PSYCH101", "Lecture", 3, "Kim", "MWF 9:00-10:15 AM", "Psychology Building 101", 150, 200, 15, 20, "Psychology", "Winter", [
         new Discussion("Open", "PSYCH101A", "Dis", 1, "Adam Patel", "T 1:00-2:00 PM", "Psychology Building 201", 30, 35, 5, 10, "PSYCH101"),
         new Discussion("Open", "PSYCH101B", "Dis", 1, "Brianna Martinez", "Th 1:00-2:00 PM", "Psychology Building 202", 30, 35, 5, 10, "PSYCH101"),
         ], [
@@ -126,7 +126,7 @@ const courses = [
 
 
         //8
-        new Course("Art History", "Open", "ARTH101", "Lecture", 3, "Dr. Lee", "MWF 1:00-2:15 PM", "Fine Arts Building 101", 100, 150, 10, 15, "Art History", "Fall", [
+        new Course("Art History", "Open", "ARTH101", "Lecture", 3, "Lee", "MWF 1:00-2:15 PM", "Fine Arts Building 101", 100, 150, 10, 15, "Art History", "Fall", [
             new Discussion("Open", "ARTH101A", "Dis", 1, "Jasmine Nguyen", "T 2:00-3:00 PM", "Fine Arts Building 201", 20, 25, 5, 10, "ARTH101"),
             new Discussion("Open", "ARTH101B", "Dis", 1, "Alex Rodriguez", "Th 2:00-3:00 PM", "Fine Arts Building 202", 20, 25, 5, 10, "ARTH101"),
             ], [
@@ -135,7 +135,7 @@ const courses = [
             ]),
 
         // 9
-            new Course("Introduction to Linguistics", "Open", "LING101", "Lecture", 3, "Dr. Davis", "MWF 2:00-3:15 PM", "Language Building 101", 120, 150, 10, 15, "Linguistics", "Fall", [
+            new Course("Introduction to Linguistics", "Open", "LING101", "Lecture", 3, "Davis", "MWF 2:00-3:15 PM", "Language Building 101", 120, 150, 10, 15, "Linguistics", "Fall", [
                 new Discussion("Open", "LING101A", "Dis", 1, "Sarah Lee", "T 1:00-2:00 PM", "Language Building 201", 20, 25, 5, 10, "LING101"),
                 new Discussion("Open", "LING101B", "Dis", 1, "Mohammed Ali", "Th 1:00-2:00 PM", "Language Building 202", 20, 25, 5, 10, "LING101"),
               ], [
@@ -144,7 +144,7 @@ const courses = [
               ]),
         
         // 10
-        new Course("Digital Art and Design", "Open", "ARTD101", "Lecture", 3, "Prof. Johnson", "TTh 12:30-1:45 PM", "Art Building 101", 80, 100, 15, 20, "Digital Art and Design", "Spring", [
+        new Course("Digital Art and Design", "Open", "ARTD101", "Lecture", 3, "Johnson", "TTh 12:30-1:45 PM", "Art Building 101", 80, 100, 15, 20, "Digital Art and Design", "Spring", [
             new Discussion("Open", "ARTD101A", "Dis", 1, "Karen Smith", "W 9:00-10:00 AM", "Art Building 201", 15, 20, 5, 10, "ARTD101"),
             new Discussion("Open", "ARTD101B", "Dis", 1, "Raj Patel", "Th 2:00-3:00 PM", "Art Building 202", 15, 20, 5, 10, "ARTD101"),
           ], [
@@ -153,7 +153,7 @@ const courses = [
           ]),
 
         // 11
-        new Course("Introduction to Statistics", "Open", "STAT101", "Lecture", 3, "Dr. Lee", "MWF 9:00-10:15 AM", "Mathematics Building 101", 120, 180, 15, 20, "Statistics", "Fall", [
+        new Course("Introduction to Statistics", "Open", "STAT101", "Lecture", 3, "Lee", "MWF 9:00-10:15 AM", "Mathematics Building 101", 120, 180, 15, 20, "Statistics", "Fall", [
             new Discussion("Open", "STAT101A", "Dis", 1, "Sara Patel", "W 1:00-2:00 PM", "Mathematics Building 202", 25, 30, 5, 10, "STAT101"),
             new Discussion("Open", "STAT101B", "Dis", 1, "John Smith", "Th 10:00-11:00 AM", "Mathematics Building 203", 25, 30, 5, 10, "STAT101"),
           ], [
@@ -162,7 +162,7 @@ const courses = [
           ]),
            
           //12
-          new Course("Introduction to Psychology", "Open", "PSYCH101", "Lecture", 3, "Dr. Smith", "TTh 1:30-2:45 PM", "Psychology Building 101", 100, 150, 10, 15, "Psychology", "Spring", [
+          new Course("Introduction to Psychology", "Open", "PSYCH101", "Lecture", 3, "Smith", "TTh 1:30-2:45 PM", "Psychology Building 101", 100, 150, 10, 15, "Psychology", "Spring", [
             new Discussion("Open", "PSYCH101A", "Dis", 1, "Avery Jones", "M 11:00-12:00 PM", "Psychology Building 202", 20, 25, 5, 10, "PSYCH101"),
             new Discussion("Open", "PSYCH101B", "Dis", 1, "Max Williams", "W 11:00-12:00 PM", "Psychology Building 203", 20, 25, 5, 10, "PSYCH101"),
           ], [
@@ -171,7 +171,7 @@ const courses = [
           ]),
           
           // 13
-          new Course("Introduction to Art History", "Open", "ARTH101", "Lecture", 3, "Dr. Kim", "MWF 9:00-10:15 AM", "Art Building 101", 80, 120, 10, 20, "Art History", "Winter", [
+          new Course("Introduction to Art History", "Open", "ARTH101", "Lecture", 3, "Kim", "MWF 9:00-10:15 AM", "Art Building 101", 80, 120, 10, 20, "Art History", "Winter", [
             new Discussion("Open", "ARTH101A", "Dis", 1, "Sophia Chen", "T 11:00-12:00 PM", "Art Building 201", 20, 25, 5, 10, "ARTH101"),
             new Discussion("Open", "ARTH101B", "Dis", 1, "Ethan Johnson", "Th 11:00-12:00 PM", "Art Building 202", 20, 25, 5, 10, "ARTH101"),
           ], [
@@ -181,7 +181,7 @@ const courses = [
           
           //14
 
-          new Course("Digital Media Production", "Open", "DM101", "Lecture", 4, "Prof. Lee", "TTh 2:30-4:00 PM", "Media Building 101", 50, 80, 5, 10, "Digital Media", "Winter", [
+          new Course("Digital Media Production", "Open", "DM101", "Lecture", 4, "Lee", "TTh 2:30-4:00 PM", "Media Building 101", 50, 80, 5, 10, "Digital Media", "Winter", [
             new Discussion("Open", "DM101A", "Dis", 1, "Avery Taylor", "W 11:00-12:00 PM", "Media Building 201", 10, 15, 2, 5, "DM101"),
             new Discussion("Open", "DM101B", "Dis", 1, "Jack Lee", "Th 11:00-12:00 PM", "Media Building 202", 10, 15, 2, 5, "DM101"),
           ], [

@@ -1,23 +1,25 @@
 /* The popup chat - hidden by default */
-  .chat-popup {
+  /* .chat-popup {
     display: none;
     position: fixed;
     bottom: 0;
     right: 15px;
     border: 3px solid #f1f1f1;
+    width: 300px;
+    height: 400px;
     z-index: 9;
   }
-  
+   */
   /* Add styles to the form container */
-  .help-container {
+  /* .help-container {
     text-align: center;
     max-width: 350px;
     padding: 10px;
     background-color: white;
-  }
+  } */
   
   /* Full-width textarea */
-  .help-container textarea {
+  /* .help-container textarea {
     width: 100%;
     padding: 15px;
     margin: 5px 0 22px 0;
@@ -25,16 +27,16 @@
     background: #f1f1f1;
     resize: none;
     min-height: 200px;
-  }
+  } */
   
   /* When the textarea gets focus, do something */
-  .help-container textarea:focus {
+  /* .help-container textarea:focus {
     background-color: #ddd;
     outline: none;
-  }
+  } */
   
   /* Set a style for the submit/send button */
-  .help-container .btn {
+  /* .help-container .btn {
     background-color: #04AA6D;
     color: white;
     padding: 16px 20px;
@@ -43,16 +45,16 @@
     width: 100%;
     margin-bottom:10px;
     opacity: 0.8;
-  }
+  } */
   
   /* Add a red background color to the cancel button */
-  .help-container .cancel {
+  /* .help-container .cancel {
     background-color: #FFA000;
     margin-top: 20px;
     color: black;
     font-size: 1.5rem;
   }
-  
+   */
   /* Add some hover effects to buttons */
   .help-container .btn:hover, .panic-button:hover {
     opacity: 1;

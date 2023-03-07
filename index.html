@@ -29,6 +29,7 @@
     <link rel="stylesheet" href = "css/studyList.css">
     <link rel="stylesheet" href = "css/notifyPopUp.css">
     <link rel="stylesheet" href = "css/auto-enroll-btn.css">
+    <link rel="stylesheet" href = "css/chat-box.css">
 </head>
 
 <body class="home">
@@ -419,24 +420,16 @@
 
     <!-- Panic Button Popup -->
     <div class="chat-popup" id="openHelp">
-        <form action="/action_page.php" class="help-container">
-            <h1 style="font-size: 30px">Feeling Overwhelmed?</h1>
-            <!-- <label for="msg"><b>Message</b></label> -->
-            <!-- <textarea placeholder="Type message.." name="msg" required></textarea> -->
-            Mental health resources: <br>
-            <a href="https://www.ootify.com/">Ootify Resources</a><br><br>
-
-            UCI Wellness, Health & Counseling Services: <br>
-            <a href="https://www.whcs.uci.edu/campus-social-work">Campus Social Workers</a><br>
-            <a href="https://counseling.uci.edu/contact-us/emergency-assistance/">UCI Crisis Care</a><br>
-            <a href="https://counseling.uci.edu/">Counseling Center</a><br>
-            <a href="https://dsc.uci.edu/">Disability Services Center</a><br>
-            <a href="https://counseling.uci.edu/resources/resources-for-faculty-staff/faculty-and-staff-mental-health-services/">Faculty & Staff Mental Health Care</a><br>
-            <a href="https://studentwellness.uci.edu/">Student Wellness & Health Promotion</a>
-
-            <!-- <button type="submit" class="btn">Send</button> -->
-            <button type="button" class="btn cancel" onclick="closeHelp()">Close</button>
-        </form>
+        <div class="chat-box">
+            <button type="button" class="close-btn" onclick="closeHelp()">X</button>
+            <div class="chat-log"></div>
+            <div class="chat-input">
+              <input type="text" placeholder="Type your message...">
+              <button>Send</button>
+            </div>
+            <!-- <button type="button" class="btn cancel" onclick="closeHelp()">Close</button> -->
+          </div>
+        
     </div>
 
 
@@ -463,6 +456,8 @@
     <script src="js/elective.js"></script>
     <script src="js/studyList.js"></script>
     <script src="js/auto-enroll.js"></script>
+    <script src="js/chat-box.js"></script>
+
 
 </body>
 

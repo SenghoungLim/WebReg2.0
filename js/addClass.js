@@ -139,33 +139,45 @@ const bag = [] // an array to hold the courses in a bag
       addButton.addEventListener('click', () => {
       if (classAlreadyAdded(rowData[1])) {
         // Main course already added
-        // display error message duplicate
-        //alert("There may be a duplicate course!");
         
-        //Create alert message div
-        const notifyDiv = document.createElement('div');
-        notifyDiv.id = 'dupNotifyID'; //add id
-       
-        //Create the p tag message within div
-        const dupMsg = document.createElement('p');
-        //Add id to the dupMsg class
-        dupMsg.id = 'dupMsgID';
-        //Add the text to the p tag
-        dupMsg.textContent = 'You cannot add the same class twice.';
-        //Add the p tag under the div class 
-        notifyDiv.appendChild(dupMsg);
+        //ERROR PREVENTION Message: When a user add duplicate courses
+        //START
+        const dupNotify = document.createElement('div');
+        dupNotify.className = 'dupNotifyClassName';
+      
+        //Icon
+        const warningIcon = document.createElement('img');
+        warningIcon.src = './images/warningSignIcon.webp';
+        warningIcon.alt = 'Warning Icon';
+        warningIcon.className= 'warningSignIcon';
+        //Message
+        const dupMsg = document.createElement('span');
+        dupMsg.className = 'dupMsg';
+        dupMsg.textContent = 'You cannot add duplicate courses!';
+        
+        //Add to the notification body 
+        dupNotify.appendChild(warningIcon);
+        dupNotify.appendChild(dupMsg);
 
-        const dupCloseBtn = document.createElement('button');
-        dupCloseBtn.id = 'dupCloseBtnID';
-        dupCloseBtn.textContent = 'Close';
+        dupNotify.id = 'dupNotifyID';
+          // Append the notification element to the body
+          document.body.appendChild(dupNotify);
+          console.log('duplicate course add');
+          // Wait for a moment to trigger the transition
+          setTimeout(() => {
+            dupNotify.classList.add('active');
+          }, 0);
 
-        dupCloseBtn.addEventListener('click', () => {
-          document.body.removeChild(dupNotifyID);
-        });
-        console.log('add + notification');
-        notifyDiv.appendChild(dupCloseBtn);
-        document.body.appendChild(notifyDiv);
+          // Wait for 3 seconds before removing the notification element
+          setTimeout(() => {
+            dupNotify.classList.remove('active');
 
+            // Wait for the transition to complete before removing the element from the DOM
+            setTimeout(() => {
+            dupNotify.parentNode.removeChild(dupNotify);
+          }, 300);
+        }, 3000);
+        //END
       }
       else {
         console.log(type);

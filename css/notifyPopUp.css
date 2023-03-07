@@ -1,54 +1,56 @@
 /* Duplicate class alert CSS */
-#dupNotifyID {
-    position: fixed;
-    bottom: 70%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    padding: 10px;
-    font-size: 14px;
-  }
-  
-  #dupCloseBtnID {
-    background-color: #ddd;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    margin-left: 10px;
-    cursor: pointer;
-  }
-  #dupMsgID{
-    color:black;
-  }
-  #dupCloseBtnID:hover {
-    background-color: #ccc;
-  }
+/* ICON CSS */
+.warningSignIcon{
+  width: 2rem;
+}
+/* The message box CSS */
+.dupNotifyClassName {
+  position: fixed;
+  top: 10%;
+  left: 35%;
+  right: 35%;
+  width: 30%;
+  background-color: white;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  transition: top 0.5s ease-in-out;
+  font-weight:bold;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /* transition: 0.2s; */
+}
+
+.dupNotifyClassName.active {
+  top: 20%;
+}
 
 /* Enroll button alert CSS */
 #enrollNotifyID {
-    position: fixed;
-    bottom: 70%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    padding: 10px;
-    font-size: 14px;
-    animation: fadeOut 3s ease;
+  position: fixed;
+  top: -50px;
+  left: 0;
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  transition: top 0.5s ease-in-out;
+  animation: hide-notification 5s forwards;
+}
+
+@keyframes hide-notification {
+  0% {
+    top: 0;
   }
-  @keyframes fadeOut {
-    from {
-      opacity: 1;
-    }
-    to {
-      opacity: 0;
-    }
+  90% {
+    top: 0;
   }
+  100% {
+    top: -50px;
+  }
+}
+
   #enrollMsgID
   {
     color:black;

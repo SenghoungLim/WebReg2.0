@@ -29,9 +29,49 @@ function addRowToTable3(rowData, type) {
 
     // Adding a class button
     addButton.addEventListener('click', () => {
+      const defaultWindowBag = document.getElementById('defaultWindowTxtID');
+      defaultWindowBag.style.display = 'none';
     if (classAlreadyAdded(rowData[1])) {
       // Main course already added
       // display error message duplicate
+        //ERROR PREVENTION Message: When a user add duplicate courses
+        //START
+        const dupNotify = document.createElement('div');
+        dupNotify.className = 'dupNotifyClassName';
+        console.log('Suggested Class')
+        //Icon
+        const warningIcon = document.createElement('img');
+        warningIcon.src = './images/warningSignIcon.webp';
+        warningIcon.alt = 'Warning Icon';
+        warningIcon.className= 'warningSignIcon';
+        //Message
+        const dupMsg = document.createElement('span');
+        dupMsg.className = 'dupMsg';
+        dupMsg.textContent = 'You cannot add duplicate courses!';
+        
+        //Add to the notification body 
+        dupNotify.appendChild(warningIcon);
+        dupNotify.appendChild(dupMsg);
+
+        dupNotify.id = 'dupNotifyID';
+          // Append the notification element to the body
+          document.body.appendChild(dupNotify);
+          console.log('duplicate course add');
+          // Wait for a moment to trigger the transition
+          setTimeout(() => {
+            dupNotify.classList.add('active');
+          }, 0);
+
+          // Wait for 3 seconds before removing the notification element
+          setTimeout(() => {
+            dupNotify.classList.remove('active');
+
+            // Wait for the transition to complete before removing the element from the DOM
+            setTimeout(() => {
+            dupNotify.parentNode.removeChild(dupNotify);
+          }, 300);
+        }, 3000);
+        //END
     }
     else {
       console.log(type);

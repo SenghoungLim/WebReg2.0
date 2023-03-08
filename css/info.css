@@ -1,0 +1,39 @@
+.course-area .info {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 500;
+    border: 0.1px solid blue ;
+    padding-left: 11px;
+}
+
+
+  
+  .info-window {
+    position: relative;
+    top: -20px;
+    right: 495px;
+    display: none;
+    color: rgb(230, 230, 230);
+    background-color: rgba(93, 93, 93, 0.95);
+    border: 1px solid rgb(34, 0, 255);
+    border-radius: 10px;
+    padding: 10px;
+    width: 500px !important;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  
+  .info-window .top-section {
+    margin-bottom: 5px;
+  }
+  
+  .info-window .bottom-section {
+    color: rgb(255, 206, 206);
+    font-size: 1.5rem;
+  }
+  

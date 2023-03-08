@@ -1,5 +1,5 @@
 
-function Course(title, status, code, type, units, instructor, schedule, location, enrollmentCurr, enrollmentMax, waitlistCurr, waitlistMax, department, term, discussions, labs) {
+function Course(title, description, prereqs, status, code, type, units, instructor, schedule, location, enrollmentCurr, enrollmentMax, waitlistCurr, waitlistMax, department, term, discussions, labs) {
     this.title = title; // On top of the table + for filtering
   
     // For filtering
@@ -7,6 +7,8 @@ function Course(title, status, code, type, units, instructor, schedule, location
     this.term = term;
   
     // In table
+    this.description = description;
+    this.prereqs = prereqs;
     this.status = status;
     this.code = code;
     this.type = type;
@@ -56,7 +58,7 @@ var count = [];
 function getData(data) {
   for (i of data) {
     count ++;
-    if (i.terms.length > 13) {  // FILTER so we don't have unneccessary classes
+    if (i.terms.length > 12) {  // FILTER so we don't have unneccessary classes
       if (count % 3 == 0){
         i.terms = 'Spring';
       }
@@ -73,9 +75,9 @@ function getData(data) {
       }
   
       courses.push(
-        new Course(i.title, "Open", i.id, "Lecture", i.units[0], "STAFF", "MWF 10-11:00 AM", "Building 1 Rm 101", 150, 300, 10, 20, i.department_name, i.terms, [
-          new Discussion("Open", i.id+'-A', "Dis", 0, "STAFF", "M 1-2:00 PM", "Building 1 Rm 201", 25, 30, 5, 10, i.id),
-          new Discussion("Open", i.id+'-B', "Dis", 0, "STAFF", "T 1-2:00 PM", "Building 1 Rm 202", 25, 25, 5, 10, i.id),
+        new Course(i.title, i.description, i.prerequisite_text, "Open", i.id, "Lecture", i.units[0], "STAFF", "MWF 10-11:00 AM", "Building 1 Rm 101", 150, 300, 10, 20, i.department_name, i.terms, [
+          new Discussion("Open", i.id+'-D1', "Dis", 0, "STAFF", "M 1-2:00 PM", "Building 1 Rm 201", 25, 30, 5, 10, i.id),
+          new Discussion("Open", i.id+'-D2', "Dis", 0, "STAFF", "T 1-2:00 PM", "Building 1 Rm 202", 25, 25, 5, 10, i.id),
         ], [
           new Lab("Open", i.id+'-L1', "Lab", 0, "STAFF", "F 1-3:00 PM", "Building 2 Rm 301", 25, 30, 5, 10, i.id),
           new Lab("Open", i.id+'-L2', "Lab", 0, "STAFF", "W 1-3:00 PM", "Building 2 Rm 302", 25, 30, 5, 10, i.id),

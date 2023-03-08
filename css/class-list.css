@@ -82,7 +82,14 @@ td button {
 }
 
 .course-titles {
-    width: 350px;
     margin-top: 30px;
     font-size: 2rem;
+    width: 50%;
+}
+
+.course-area {
+    display: flex;
+    width: 1000%;
+    justify-content: space-between;
+    align-items: end;
 }

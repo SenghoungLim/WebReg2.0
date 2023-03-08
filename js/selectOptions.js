@@ -27,7 +27,7 @@ const instructorSelect = document.getElementById('instructor');
 function fillInOptions() {
     for (department of getAllDepartments()) {
         const opt = document.createElement('option');
-        opt.value = department.replace(/ +/g, '-').toLowerCase();
+        opt.value = department;
         opt.innerText = department;
         departmentSelect.appendChild(opt);
     }

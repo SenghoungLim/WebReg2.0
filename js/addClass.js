@@ -3,14 +3,13 @@
 
 const bag = [] // an array to hold the courses in a bag
 
-  function filterCourses(title, term, instructor, department) {
+  function filterCourses(code, term, instructor, department) {
     let filteredCourses = courses.filter(course => {
-      let titleMatch = title === '' || course.title.toLowerCase() === title.toLowerCase();
+      let codeMatch = code === '' || course.code.toLowerCase() === code.toLowerCase();
       let termMatch = term === '' || course.term.toLowerCase() === term.toLowerCase();
       let instructorMatch = instructor === '' || course.instructor.toLowerCase() === instructor.toLowerCase();
       let departmentMatch = department === '' || course.department.toLowerCase() === department.toLowerCase();
-
-      return titleMatch && termMatch && instructorMatch && departmentMatch;
+      return codeMatch && termMatch && instructorMatch && departmentMatch;
     });
     return filteredCourses;
   }
@@ -394,7 +393,7 @@ function displayCourses(courses) {
         const courseHeading = document.createElement('div');
         courseHeading.className = 'course-heading';
 
-        courseHeading.innerText  = getObject(code).title;
+        courseHeading.innerText  = code + ' - ' + getObject(code).title;
         // separator.innerText = "--------------";
 
         const ul = document.createElement('ul');
@@ -487,11 +486,11 @@ function displayCourses(courses) {
     anteater.style.display = "none";
     console.log("clicked")
     event.preventDefault();
-    let title = document.getElementById('course-search').value;
+    let code = document.getElementById('course-search').value;
     let term = document.getElementById('term').value;
     let instructor = document.getElementById('instructor').value;
     let department = document.getElementById('department').value;
-    let filteredCourses = filterCourses(title, term, instructor, department);
+    let filteredCourses = filterCourses(code, term, instructor, department);
     displayCourses(filteredCourses);
   });
   

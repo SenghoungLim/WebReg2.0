@@ -158,4 +158,3 @@ function displayCourses2(courses) {
       
   }
 
-  displayCourses2(courses);

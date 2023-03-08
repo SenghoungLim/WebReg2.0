@@ -20,19 +20,19 @@ function togglePanel() {
 
 
 // Function to display courses by title and display results
-function displayCoursesByTitle(title) {
+function displayCoursesByTitle(name) {
   // Clear existing results
   searchResults.innerHTML = "";
   
-  // Filter courses by title
-  const courses2 = courses.filter(course => course.title.toLowerCase().includes(title.toLowerCase()));
+  // Filter courses by title OR Code
+  const courses2 = courses.filter(course => (course.title.toLowerCase().includes(name.toLowerCase()) || course.code.toLowerCase().includes(name.toLowerCase())));
   
   // Display filtered courses
   courses2.forEach(course => {
     const courseButton = document.createElement("button");
-    courseButton.textContent = course.title;
+    courseButton.textContent = course.code + ' - ' + course.title;
     courseButton.addEventListener("click", event => {
-    searchInput.value = course.title;
+    searchInput.value = course.code;
     searchResults.innerHTML = '';
     });
 

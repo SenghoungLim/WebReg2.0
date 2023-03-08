@@ -55,7 +55,9 @@
     align-items: center;
     justify-content: end;
     gap: 5px;
-    padding:10px;
+    padding-top:20px;
+    padding-bottom: 10px;
+    height: 20px;
   }
 
   .close-bag {
@@ -138,6 +140,7 @@
 
 .course-heading {
   font-weight: bold;
+  font-size: 1.5rem;
   padding-top: 1rem;
 }
 

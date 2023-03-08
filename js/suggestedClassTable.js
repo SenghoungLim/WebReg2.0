@@ -133,11 +133,35 @@ function displayCourses2(courses) {
   
     for (let i = 0 ; i < courses.length; i++) {
         // Course title
-
+        const courseArea = document.createElement('div'); // new
+        courseArea.className = 'course-area';  // new
+  
         const courseTitle = document.createElement('div');
         courseTitle.className = 'course-titles';
         courseTitle.textContent = courses[i].code + '\t-\t' + courses[i].title;
-        table2.appendChild(courseTitle);
+
+
+      const infoWindow = document.createElement("div");
+
+      const infoDiv = getInfoDiv(infoWindow, courses[i].code, courses[i].description, courses[i].prereqs)
+
+
+      // Show the popup window when the user hovers over the "i" symbol
+      infoDiv.addEventListener("mouseenter", function() {
+        infoWindow.style.display = "block"; 
+      });
+
+      // Hide the popup window when the user moves the mouse away from the "i" symbol
+      infoDiv.addEventListener("mouseleave", function() {
+        infoWindow.style.display = "none";
+
+      });
+
+
+
+      courseArea.append(courseTitle);  // new
+      courseArea.append(infoDiv); // new
+      table2.appendChild(courseArea); // new
     
         // Add the headers row to the table
         addRowToTable2([

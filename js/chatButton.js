@@ -1,7 +1,7 @@
-function openHelp() {
-    document.getElementById("openHelp").style.display = "block";
-  }
+// function openHelp() {
+//     document.getElementById("openHelp").style.display = "block";
+//   }
   
-  function closeHelp() {
-    document.getElementById("openHelp").style.display = "none";
-  }
+//   function closeHelp() {
+//     document.getElementById("openHelp").style.display = "none";
+//   }

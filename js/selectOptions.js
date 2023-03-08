@@ -1,10 +1,14 @@
+
 function getAllDepartments() {
     l = []
     
     for (let i = 0; i< courses.length; i++) {
         l.push(courses[i].department);
     }
-    return l
+
+    // Get only unique elements
+    var unique = [...new Set(l)];
+    return unique;
 }
 
 function getAllInstructors() {

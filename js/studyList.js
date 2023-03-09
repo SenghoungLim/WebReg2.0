@@ -74,12 +74,65 @@ function displayStudyList(bagList) {
             drop.textContent = 'DROP';
 
             drop.addEventListener('click', () => {
-                studyList.splice(i, 1);
-                bagList.splice(i, 1);
-                console.log(bagList);
+                
+                // Get the modal element
+                const confirmBtnBox = document.createElement('div');
+                confirmBtnBox.classList.add('modal');
 
-                displayStudyList(bagList);
-                console.log(studyList);
+                // Create the modal content
+                const modalContent = document.createElement('div');
+                modalContent.classList.add('modal-content');
+                
+                // Create the yes button
+                const yesBtn = document.createElement('button');
+                yesBtn.classList.add('yesButtonClass');
+                yesBtn.id = 'yesButton';
+                yesBtn.textContent = 'Yes';
+                
+                // Clear the course if they select yes
+                yesBtn.addEventListener('click', () => {
+                // Add your confirmation logic here
+                    confirmBtnBox.style.display = 'none';
+                    studyList.splice(i, 1);
+                    bagList.splice(i, 1);
+                    console.log(bagList);
+    
+                    displayStudyList(bagList);
+                    console.log(studyList);
+                });
+
+                 // Create the No button
+                 const noBtn = document.createElement('button');
+                 noBtn.classList.add('noButtonClass');
+                 noBtn.id = 'noButton';
+                 noBtn.textContent = 'No';
+                 noBtn.addEventListener('click', () => {
+                    // Add your confirmation logic here
+                    confirmBtnBox.style.display = 'none';
+                 });
+
+                
+                
+                // Create the modal message
+                const message = document.createElement('p');
+                message.id = 'modalMsgID';
+                message.textContent = 'Are you sure you want to drop this class?';
+                
+                // Add the close button and message to the modal content
+                yesBtn.style.display = 'inline-block';
+                noBtn.style.display = 'inline-block';
+                modalContent.appendChild(message);
+                modalContent.appendChild(yesBtn);
+                modalContent.appendChild(noBtn);
+                
+                // Add the modal content to the modal
+                confirmBtnBox.appendChild(modalContent);
+                
+                // Append the modal to the document body
+                document.body.appendChild(confirmBtnBox);
+
+                // Show the modal
+                confirmBtnBox.style.display = 'block';
             });
 
             top.appendChild(courseTitle);

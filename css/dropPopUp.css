@@ -1,0 +1,30 @@
+#confirmBtnBox {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 2px solid black;
+    text-align: center;
+  }
+  
+  #yesButton {
+    background-color:#3f9c35;
+    color: white;
+    width: 8rem;
+    height: 3.5rem;
+    margin: 3rem;
+    border-radius: 15px;
+  }
+  
+  #noButton {
+    background-color: #FF6962;;
+    color: white;
+    width: 8rem;
+    height: 3.5rem;
+    margin-left: 3rem;
+    border-radius: 15px;
+  }
+  

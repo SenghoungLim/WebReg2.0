@@ -773,3 +773,42 @@ button:hover {
 .navbar-brand p{
     font-weight:500 !important;
   }
+
+#slideBar {
+    position: absolute;
+    top: 3%;
+    left: 88%;
+    z-index: 2000;
+    box-shadow: none;
+}
+
+#slideBar
+{
+    position: fixed;
+    -webkit-appearance:none;
+    appearance:none;
+    width: 6%;
+    height: 1.5%;
+    max-width: 400px;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    scroll-behavior: smooth;
+}
+
+
+#slideBar::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 15%; /* Set a specific slider handle width */
+    height: 20px; /* Slider handle height */
+    border-radius: 25px;
+    background:#FFD200;
+    cursor: pointer; /* Cursor on hover */
+    scroll-behavior: smooth;
+  }
+

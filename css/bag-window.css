@@ -187,6 +187,9 @@ ul .left img{
   text-align: center;
   padding: 2px 5px;
   display: none;
+  border-radius: 10px;
+  width: 12rem;
+  height: 28px;
 }
 
 .right{

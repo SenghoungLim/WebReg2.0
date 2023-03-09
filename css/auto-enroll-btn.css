@@ -2,13 +2,15 @@
   padding-top: 1.3rem;
 }
 #auto-enroll-button{
-  background-color: #0064a4;
-  color: white;
+  background-color: #FFC107;
+  color: black;
   border-radius: 10px;
   text-align: center;
   /* padding: 2px 5px; */
   display: none;
   width: 12rem;
+  height: 28px;
+
 }
 
 #modalMsgID{

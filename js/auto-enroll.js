@@ -21,7 +21,7 @@ autoEnrollButton.addEventListener('click', () => {
   // Create the modal message
   const message = document.createElement('p');
   message.id = 'modalMsgID';
-  message.textContent = 'We would like to inform you that by utilizing our "Auto Enroll" feature, your course preferences will be securely saved and enrolled once your enrollment window becomes available. In the event that a class is already filled to capacity, our system will prioritize your enrollment by adding you to the waitlist of the first available course. You will be notified of any updates regarding your enrolled or waitlisted courses via email.';
+  message.textContent = 'You will be automatically enrolled in your courses at your enrollment window March 9, 2023 at 10:30 AM. You will be notified of any updates regarding your enrolled or waitlisted courses via email.';
   
   // Add the close button and message to the modal content
   modalContent.appendChild(confirmButton);

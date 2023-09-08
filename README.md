@@ -4,6 +4,9 @@
 
 A design and implementation for an improved registration system for students of UCI.
 
+The website can be accessed here: https://senghounglim.github.io/WebReg2.0/
+
+
 # Home Screen
 <img width="1425" alt="Screen Shot 2023-08-06 at 9 22 46 PM" src="https://github.com/SenghoungLim/WebReg2.0/assets/91560523/cf89b238-598f-438d-91f8-33329fd4b6c4">
 

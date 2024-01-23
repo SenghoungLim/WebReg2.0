@@ -9,7 +9,6 @@ const bag = [] // an array to hold the courses in a bag
       let termMatch = term === '' || course.term.toLowerCase() === term.toLowerCase();
       let instructorMatch = instructor === '' || course.instructor.toLowerCase() === instructor.toLowerCase();
       let departmentMatch = department === '' || course.department.toLowerCase() === department.toLowerCase();
-      console.log(department, course.department);
       return codeMatch && termMatch && instructorMatch && departmentMatch;
     });
     return filteredCourses;
@@ -85,7 +84,7 @@ const bag = [] // an array to hold the courses in a bag
   function deleteFromBag(code) {
     for (var i = 0; i< bag.length; i++) {
       if (bag[i] == code) {
-        console.log(bag[i]);
+        bag[i];
         bag.splice(i, 1);
       }
     }

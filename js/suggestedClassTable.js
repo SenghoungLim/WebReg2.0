@@ -100,7 +100,6 @@
         if (type == 'main-course') {
           var discussionCodes = getDiscussions(rowData[1]);
           var labCodes = getLabs(rowData[1]);
-          console.log(discussionCodes);
           for (var i = 0; i< discussionCodes.length; i++) {
             const disButton = document.getElementById(discussionCodes[i] + '-suggested').getElementsByTagName('button')[0];
             disButton.style.display = 'inline';

@@ -276,8 +276,10 @@ const bag = [] // an array to hold the courses in a bag
     // Add the row to the table
     table.appendChild(row);
   }
+
   
 function displayCourses(courses) {
+
   // Clear previous classes
   table.textContent = '';
 
@@ -504,6 +506,7 @@ function displayCourses(courses) {
        });
   }
   
+
   let classForm = document.getElementById('class-form');
   classForm.addEventListener('submit', event => {
     console.log("heyy");
@@ -515,8 +518,23 @@ function displayCourses(courses) {
     let term = document.getElementById('term').value;
     let instructor = document.getElementById('instructor').value;
     let department = document.getElementById('department').value;
+    console.log('Code:', code);
+    console.log('Term:', term);
+    console.log('Instructor:', instructor);
+    console.log('Department:', department);
+    
     let filteredCourses = filterCourses(code, term, instructor, department);
     displayCourses(filteredCourses);
   });
-  
 
+
+
+  /* ADDED 1/23/24
+  By default, show the default search instead of the anteater picture
+  */
+
+window.addEventListener('load', () => {
+  const anteater = document.getElementById('initialOpenPageID');
+  anteater.style.display = "none";
+  displayCourses(defaultClasses);
+});
